@@ -1,0 +1,16 @@
+sample_id,doc_type,original_id,tamper_class,field_changed,page_affected,severity,expected_verdict,capture_type,task_verdict,content_changed,could_not_verify,flagged,rule_ref,version_id,split,files
+FIR-9001-V00-digital,FIR,FIR-9001,NONE,,,None,Identical,digital,Valid,no,,no,,FIR-9001-V00,train,files/placeholder.txt
+FIR-9001-V00-scan_sim,FIR,FIR-9001,NONE,,,None,Equivalent,scan_sim,Valid,no,,no,,FIR-9001-V00,train,files/placeholder.txt
+FIR-9001-V01-digital,FIR,FIR-9001,T_DATE,date_of_incident,1,Major,Tampered,digital,Tampered,yes,,no,,FIR-9001-V01,train,files/placeholder.txt
+FIR-9001-V02-digital,FIR,FIR-9001,B_BLUR_ONLY,,1,None,Inconclusive,digital,Inconclusive,no,date_of_incident,no,D41,FIR-9001-V02,train,files/placeholder.txt
+FIR-9001-V03-digital,FIR,FIR-9001,B_BLUR_PLUS_EDIT,property_value,1,Major,Tampered,digital,Tampered,yes,date_of_incident,no,D41,FIR-9001-V03,train,files/placeholder.txt
+FIR-9001-V04-digital,FIR,FIR-9001,A_MARGIN_NOTE,annotation,1,Minor,Tampered,digital,Tampered,yes,,yes,D46,FIR-9001-V04,train,files/placeholder.txt
+FIR-9001-V05-digital,FIR,FIR-9001,R_REDACTED,victim_names,1,None,Not supported,digital,Not supported,yes,,no,D47,FIR-9001-V05,train,files/placeholder.txt
+FIR-9001-V06-digital,FIR,FIR-9001,P_PAGE_REORDER,page_reordered,1;2,Major,Tampered,digital,Tampered,yes,,no,D43,FIR-9001-V06,train,files/placeholder.txt
+FIR-9001-V07-digital,FIR,FIR-9001,V_STAMP_REMOVED,stamp:ps,2,Major,Tampered,digital,Tampered,yes,,no,,FIR-9001-V07,train,files/placeholder.txt
+CS-9001-V00-digital,CHARGESHEET,CS-9001,NONE,,,None,Identical,digital,Valid,no,,no,,CS-9001-V00,val,files/placeholder.txt
+CS-9001-V01-digital,CHARGESHEET,CS-9001,N_NEGATION,narrative,2,Major,Tampered,digital,Tampered,yes,,no,D42,CS-9001-V01,val,files/placeholder.txt
+CS-9001-V02-digital,CHARGESHEET,CS-9001,F_HONORIFIC,,,None,Equivalent,digital,Valid,no,,no,D48,CS-9001-V02,val,files/placeholder.txt
+STM-9001-V00-digital,STATEMENT,STM-9001,NONE,,,None,Identical,digital,Valid,no,,no,,STM-9001-V00,test,files/placeholder.txt
+STM-9001-V01-digital,STATEMENT,STM-9001,T_NAME_ORDER,accused_names,1,Minor,Tampered,digital,Tampered,yes,,no,D44,STM-9001-V01,test,files/placeholder.txt
+STM-9001-V02-digital,STATEMENT,STM-9001,N_SENTENCE_ADD_ENTITY,narrative,2,Major,Tampered,digital,Tampered,yes,,no,D45,STM-9001-V02,test,files/placeholder.txt

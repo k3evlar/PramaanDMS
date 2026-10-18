@@ -1,0 +1,132 @@
+{
+  "dataset_dir": "dataset_v2",
+  "tree": [
+    "annotations/  (3 files)",
+    "base_docs/  (100 files)",
+    "captures/  (0 files)",
+    "  phone_photo/  (850 files)",
+    "  print_scan/  (850 files)",
+    "tampered/  (0 files)",
+    "  E0/  (100 files)",
+    "  E1/  (100 files)",
+    "  E10/  (100 files)",
+    "  E11/  (100 files)",
+    "  E12/  (100 files)",
+    "  E13/  (100 files)",
+    "  E14/  (100 files)",
+    "  E15/  (100 files)",
+    "  E2/  (100 files)",
+    "  E3/  (100 files)",
+    "  E4/  (100 files)",
+    "  E5/  (100 files)",
+    "  E6/  (100 files)",
+    "  E7/  (100 files)",
+    "  E8/  (100 files)",
+    "  E9/  (100 files)"
+  ],
+  "file_count": 3407,
+  "files_by_extension": {
+    ".csv": 5,
+    ".jpg": 1700,
+    ".json": 852,
+    ".pdf": 850
+  },
+  "bytes_by_extension": {
+    ".csv": 1034824,
+    ".jpg": 625834441,
+    ".json": 1158618,
+    ".pdf": 3018312
+  },
+  "total_bytes": 631046195,
+  "total_mb": 631.0,
+  "labels_csv": {
+    "path": "dataset_v2/labels.csv",
+    "format": "CSV, UTF-8 with BOM",
+    "columns": [
+      "sample_id",
+      "doc_type",
+      "original_id",
+      "tamper_class",
+      "field_changed",
+      "page_affected",
+      "severity",
+      "expected_verdict",
+      "capture_type",
+      "file_path",
+      "split"
+    ],
+    "row_count": 2550,
+    "sha256": "a45a5fde1287125804981f0ce58a2212b458e0048e4a4cd7b14f1d6aba846219"
+  },
+  "other_label_files": {
+    "annotations/change_log.csv": 850,
+    "annotations/capture_variants.csv": 1700,
+    "splits.csv": 50
+  },
+  "annotation_dir_files": [
+    "capture_variants.csv",
+    "change_log.csv",
+    "independent_review_template.csv"
+  ],
+  "independent_review_done": false,
+  "dataset_manifest": {
+    "dataset_name": "PramaanDMS synthetic English dataset V2",
+    "version": "0.2-pilot",
+    "seed": 20261017,
+    "base_document_count": 50,
+    "sample_count": 850,
+    "implemented_classes": [
+      "E0",
+      "E1",
+      "E2",
+      "E3",
+      "E4",
+      "E5",
+      "E6",
+      "E7",
+      "E8",
+      "E9",
+      "E10",
+      "E11",
+      "E12",
+      "E13",
+      "E14",
+      "E15"
+    ],
+    "capture_types": [
+      "digital"
+    ],
+    "not_yet_implemented": [
+      "print-scan variants",
+      "phone-photo variants",
+      "train/validation/test split",
+      "automatic OCR confidence checks",
+      "independent second-review workflow"
+    ],
+    "review_required": true,
+    "important_note": "Labels are provisional; verify every PDF, change, page number, and expected verdict before research use."
+  },
+  "split_manifest_base_counts": {
+    "train": 34,
+    "validation": 4,
+    "test": 12
+  },
+  "files_without_label_row": [],
+  "label_rows_without_file": [],
+  "pdf_without_json_sidecar": [],
+  "json_without_pdf": [],
+  "corrupt_or_unreadable": [],
+  "pdf_page_counts": {
+    "1": 850
+  },
+  "pdfs_with_empty_text_layer": [],
+  "change_log_vs_digital_rows": {
+    "missing_in_change_log": [],
+    "extra_in_change_log": []
+  },
+  "capture_log_vs_capture_rows": {
+    "missing_in_capture_log": [],
+    "extra_in_capture_log": []
+  },
+  "stale_dataset_manifest": true
+}

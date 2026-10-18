@@ -1,0 +1,44 @@
+{
+  "dataset_name": "PramaanDMS synthetic English dataset V2",
+  "seed": 20261017,
+  "split_unit": "original_id (base document)",
+  "strategy": "stratified by doc_type; all variants grouped by original_id",
+  "proportions_requested": {
+    "train": 0.7,
+    "validation": 0.15,
+    "test": 0.15
+  },
+  "base_document_counts": {
+    "train": 34,
+    "validation": 4,
+    "test": 12
+  },
+  "sample_row_counts_including_capture_variants": {
+    "train": 1734,
+    "validation": 204,
+    "test": 612
+  },
+  "base_document_counts_by_doc_type": {
+    "FIR": {
+      "test": 3,
+      "train": 9,
+      "validation": 1
+    },
+    "charge_sheet": {
+      "train": 9,
+      "test": 3,
+      "validation": 1
+    },
+    "court_order": {
+      "test": 3,
+      "train": 8,
+      "validation": 1
+    },
+    "statement": {
+      "train": 8,
+      "test": 3,
+      "validation": 1
+    }
+  },
+  "note": "Approximate 70/15/15 proportions are applied within each document type. Small per-type counts cause rounding deviations. All variants of each original_id are assigned to the same split. This is not stratified by tamper class because each base document has variants across the tamper classes."
+}

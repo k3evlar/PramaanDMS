@@ -1,0 +1,243 @@
+{
+  "realism_marker_hits_by_doc_type": {
+    "BNS / BNSS / BSA reference": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "IPC / CrPC reference": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "u/s or 'Section N of <Act>' citation": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "Police Station label": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "District label": {
+      "FIR": 5,
+      "charge_sheet": 3,
+      "statement": 1,
+      "court_order": 3
+    },
+    "Complainant / informant particulars": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "Information received at PS (date/time)": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "Brief facts / statement body heading": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "Officer rank and belt / ID": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    },
+    "Signature of officer / complainant": {
+      "FIR": 0,
+      "charge_sheet": 0,
+      "statement": 0,
+      "court_order": 0
+    }
+  },
+  "act_names_used": {
+    "Sample Evidence Protection Act": 16,
+    "Fictional Public Order Act": 26,
+    "Synthetic Property Safety Act": 8
+  },
+  "sections_used": {
+    "Section 18": 14,
+    "Section 31": 16,
+    "Section 12": 9,
+    "Section 24": 11
+  },
+  "all_doc_types_share_one_layout": true,
+  "layout_variants_per_type": {
+    "FIR": 1,
+    "charge_sheet": 1,
+    "statement": 1,
+    "court_order": 1
+  },
+  "timeline_inconsistencies_in_bases": [],
+  "pii_hits": {},
+  "non_ascii_chars_in_pdf_text": {
+    "U+2014": 900
+  },
+  "non_ascii_chars_in_json": {},
+  "pdfs_with_devanagari": 0,
+  "name_pool": {
+    "Skyler Hayes": 25,
+    "Kendall Rivers": 25,
+    "Jamie Frost": 23,
+    "Parker Wren": 22,
+    "Robin Mercer": 21,
+    "Casey North": 21,
+    "Avery Rowan": 20,
+    "Drew Arden": 20,
+    "Jordan Vale": 19,
+    "Cameron Blake": 19,
+    "Emerson Lane": 19,
+    "Riley Quinn": 18,
+    "Taylor Reed": 17,
+    "Finley Hart": 17,
+    "Morgan Ellis": 14
+  },
+  "distinct_values_per_field_across_50_bases": {
+    "document_type": 4,
+    "case_number": 50,
+    "fir_number": 50,
+    "court_name": 3,
+    "police_station": 3,
+    "jurisdiction": 5,
+    "filing_date": 50,
+    "document_date": 50,
+    "incident_date": 50,
+    "incident_time": 4,
+    "incident_location": 5,
+    "complainant_name": 15,
+    "accused_name": 14,
+    "victim_name": 15,
+    "witness_name": 14,
+    "investigating_officer": 14,
+    "advocate_name": 15,
+    "act_name": 3,
+    "section_number": 4,
+    "offence_description": 5,
+    "monetary_amount": 5,
+    "evidence_item_id": 50,
+    "evidence_description": 50,
+    "seizure_date": 50,
+    "custody_holder": 50,
+    "case_status": 3,
+    "next_hearing_date": 20
+  },
+  "repeated_narrative_sentences": {
+    "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Eastvale Sample Sector.": 13,
+    "The account is synthetic and created only to test meaning-aware document comparison.": 50,
+    "A sealed sample parcel recorded as exhibit <ID>;": 50,
+    "no real evidence is represented.": 50,
+    "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Westmere Fictional Ward.": 6,
+    "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Lakewood Test Quarter.": 15,
+    "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Redstone Fictional Block.": 4,
+    "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Northbridge Sample District.": 12
+  },
+  "clean_render_reference": {
+    "sharpness": 2215.943495279221,
+    "brightness": 245.53670920235783,
+    "contrast": 39.74493308863349,
+    "w": 1323
+  },
+  "image_quality": {
+    "scan": {
+      "dpi_a4": {
+        "min": 160.0,
+        "p05": 160.0,
+        "median": 160.0,
+        "max": 160.0
+      },
+      "sharpness": {
+        "min": 1723.75,
+        "p05": 1808.0,
+        "median": 2045.25,
+        "max": 2813.77
+      },
+      "brightness": {
+        "min": 243.69,
+        "p05": 244.0,
+        "median": 244.49,
+        "max": 245.08
+      },
+      "contrast": {
+        "min": 36.06,
+        "p05": 36.51,
+        "median": 38.68,
+        "max": 41.19
+      },
+      "skew_deg": {
+        "min": -1.14,
+        "p05": -0.86,
+        "median": 0.0,
+        "max": 1.0
+      },
+      "count": 850,
+      "abs_skew": {
+        "min": 0.0,
+        "p05": 0.0,
+        "median": 0.2,
+        "max": 1.14
+      }
+    },
+    "photo": {
+      "dpi_a4": {
+        "min": 160.0,
+        "p05": 160.0,
+        "median": 160.0,
+        "max": 160.0
+      },
+      "sharpness": {
+        "min": 1871.44,
+        "p05": 1912.55,
+        "median": 1963.97,
+        "max": 2144.08
+      },
+      "brightness": {
+        "min": 232.74,
+        "p05": 233.05,
+        "median": 233.36,
+        "max": 233.81
+      },
+      "contrast": {
+        "min": 39.73,
+        "p05": 40.07,
+        "median": 40.49,
+        "max": 41.36
+      },
+      "skew_deg": {
+        "min": 1.08,
+        "p05": 1.31,
+        "median": 2.07,
+        "max": 3.05
+      },
+      "count": 850,
+      "abs_skew": {
+        "min": 1.08,
+        "p05": 1.31,
+        "median": 2.07,
+        "max": 3.05
+      }
+    }
+  },
+  "image_thresholds": {
+    "min_dpi": 150,
+    "min_sharpness_ratio": 0.25,
+    "max_skew_deg": 5.0,
+    "brightness": [
+      60,
+      250
+    ],
+    "min_contrast": 25
+  },
+  "images_flagged": [],
+  "images_flagged_pct": 0.0
+}

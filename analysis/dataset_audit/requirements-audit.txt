@@ -1,0 +1,12 @@
+# Audit-only tools. Licences: numpy BSD-3, pillow MIT-CMU (HPND), opencv-python-headless Apache-2.0,
+# pypdfium2 Apache-2.0/BSD-3, matplotlib PSF-based (Matplotlib licence), rapidfuzz MIT,
+# rapidocr Apache-2.0 (PP-OCR models Apache-2.0), onnxruntime MIT, reportlab BSD (for ocr_v3.py).
+numpy==2.5.4
+pillow==13.0.0
+opencv-python-headless==5.0.0.93
+pypdfium2==5.14.0
+matplotlib==3.11.2
+rapidfuzz==3.14.6
+rapidocr==3.10.0
+onnxruntime==1.31.0
+reportlab==5.0.1

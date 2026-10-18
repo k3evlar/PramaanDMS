@@ -1,0 +1,477 @@
+{
+  "base_documents": 50,
+  "base_by_type": [
+    {
+      "value": "FIR",
+      "count": 13,
+      "pct": 26.0
+    },
+    {
+      "value": "charge_sheet",
+      "count": 13,
+      "pct": 26.0
+    },
+    {
+      "value": "statement",
+      "count": 12,
+      "pct": 24.0
+    },
+    {
+      "value": "court_order",
+      "count": 12,
+      "pct": 24.0
+    }
+  ],
+  "class_all_rows": [
+    {
+      "value": "E0",
+      "count": 300,
+      "pct": 11.76
+    },
+    {
+      "value": "E1",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E2",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E3",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E4",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E5",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E6",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E7",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E8",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E9",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E10",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E11",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E12",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E13",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E14",
+      "count": 150,
+      "pct": 5.88
+    },
+    {
+      "value": "E15",
+      "count": 150,
+      "pct": 5.88
+    }
+  ],
+  "class_digital_variants_excluding_base": [
+    {
+      "value": "E0",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E1",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E2",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E3",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E4",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E5",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E6",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E7",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E8",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E9",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E10",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E11",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E12",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E13",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E14",
+      "count": 50,
+      "pct": 6.25
+    },
+    {
+      "value": "E15",
+      "count": 50,
+      "pct": 6.25
+    }
+  ],
+  "class_by_doc_type": {
+    "FIR": {
+      "E0": 13,
+      "E1": 13,
+      "E2": 13,
+      "E3": 13,
+      "E4": 13,
+      "E5": 13,
+      "E6": 13,
+      "E7": 13,
+      "E8": 13,
+      "E9": 13,
+      "E10": 13,
+      "E11": 13,
+      "E12": 13,
+      "E13": 13,
+      "E14": 13,
+      "E15": 13
+    },
+    "charge_sheet": {
+      "E0": 13,
+      "E1": 13,
+      "E2": 13,
+      "E3": 13,
+      "E4": 13,
+      "E5": 13,
+      "E6": 13,
+      "E7": 13,
+      "E8": 13,
+      "E9": 13,
+      "E10": 13,
+      "E11": 13,
+      "E12": 13,
+      "E13": 13,
+      "E14": 13,
+      "E15": 13
+    },
+    "statement": {
+      "E0": 12,
+      "E1": 12,
+      "E2": 12,
+      "E3": 12,
+      "E4": 12,
+      "E5": 12,
+      "E6": 12,
+      "E7": 12,
+      "E8": 12,
+      "E9": 12,
+      "E10": 12,
+      "E11": 12,
+      "E12": 12,
+      "E13": 12,
+      "E14": 12,
+      "E15": 12
+    },
+    "court_order": {
+      "E0": 12,
+      "E1": 12,
+      "E2": 12,
+      "E3": 12,
+      "E4": 12,
+      "E5": 12,
+      "E6": 12,
+      "E7": 12,
+      "E8": 12,
+      "E9": 12,
+      "E10": 12,
+      "E11": 12,
+      "E12": 12,
+      "E13": 12,
+      "E14": 12,
+      "E15": 12
+    }
+  },
+  "expected_verdict": [
+    {
+      "value": "Tampered",
+      "count": 2250,
+      "pct": 88.24
+    },
+    {
+      "value": "Valid",
+      "count": 300,
+      "pct": 11.76
+    }
+  ],
+  "severity": [
+    {
+      "value": "Major",
+      "count": 2250,
+      "pct": 88.24
+    },
+    {
+      "value": "None",
+      "count": 300,
+      "pct": 11.76
+    }
+  ],
+  "capture": [
+    {
+      "value": "digital",
+      "count": 850,
+      "pct": 33.33
+    },
+    {
+      "value": "scan",
+      "count": 850,
+      "pct": 33.33
+    },
+    {
+      "value": "photo",
+      "count": 850,
+      "pct": 33.33
+    }
+  ],
+  "class_x_capture": {
+    "E0": {
+      "digital": 100,
+      "scan": 100,
+      "photo": 100
+    },
+    "E1": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E2": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E3": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E4": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E5": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E6": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E7": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E8": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E9": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E10": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E11": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E12": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E13": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E14": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    },
+    "E15": {
+      "digital": 50,
+      "scan": 50,
+      "photo": 50
+    }
+  },
+  "class_by_split": {
+    "train": {
+      "E0": 204,
+      "E1": 102,
+      "E2": 102,
+      "E3": 102,
+      "E4": 102,
+      "E5": 102,
+      "E6": 102,
+      "E7": 102,
+      "E8": 102,
+      "E9": 102,
+      "E10": 102,
+      "E11": 102,
+      "E12": 102,
+      "E13": 102,
+      "E14": 102,
+      "E15": 102
+    },
+    "validation": {
+      "E0": 24,
+      "E1": 12,
+      "E2": 12,
+      "E3": 12,
+      "E4": 12,
+      "E5": 12,
+      "E6": 12,
+      "E7": 12,
+      "E8": 12,
+      "E9": 12,
+      "E10": 12,
+      "E11": 12,
+      "E12": 12,
+      "E13": 12,
+      "E14": 12,
+      "E15": 12
+    },
+    "test": {
+      "E0": 72,
+      "E1": 36,
+      "E2": 36,
+      "E3": 36,
+      "E4": 36,
+      "E5": 36,
+      "E6": 36,
+      "E7": 36,
+      "E8": 36,
+      "E9": 36,
+      "E10": 36,
+      "E11": 36,
+      "E12": 36,
+      "E13": 36,
+      "E14": 36,
+      "E15": 36
+    }
+  },
+  "harmless_share_pct": 11.76,
+  "flags": [
+    "E0: only 24 validation samples (<30)",
+    "E1: only 12 validation samples (<30)",
+    "E2: only 12 validation samples (<30)",
+    "E3: only 12 validation samples (<30)",
+    "E4: only 12 validation samples (<30)",
+    "E5: only 12 validation samples (<30)",
+    "E6: only 12 validation samples (<30)",
+    "E7: only 12 validation samples (<30)",
+    "E8: only 12 validation samples (<30)",
+    "E9: only 12 validation samples (<30)",
+    "E10: only 12 validation samples (<30)",
+    "E11: only 12 validation samples (<30)",
+    "E12: only 12 validation samples (<30)",
+    "E13: only 12 validation samples (<30)",
+    "E14: only 12 validation samples (<30)",
+    "E15: only 12 validation samples (<30)",
+    "harmless (E0) share 11.76% vs about 33% target (SCOPE.md 5)",
+    "verdict imbalance Tampered:Valid = 2250:300",
+    "no Minor severity samples at all",
+    "FIR: 13 bases vs SCOPE.md suggestion 20",
+    "charge_sheet: 13 bases vs SCOPE.md suggestion 15",
+    "statement: 12 bases vs SCOPE.md suggestion 8",
+    "court_order: 12 bases vs SCOPE.md suggestion 7"
+  ],
+  "charts": [
+    "base_docs_by_type.png",
+    "capture_distribution.png",
+    "class_by_split.png",
+    "class_distribution.png",
+    "class_x_capture.png",
+    "class_x_doctype.png",
+    "verdict_distribution.png"
+  ]
+}

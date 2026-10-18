@@ -1,0 +1,55 @@
+{
+  "v0_raw": {
+    "bases": 60,
+    "distinct_narratives": 60,
+    "cross_split_pairs": 837,
+    "cross_split_pairs_above_0.9": 0,
+    "cross_split_sim_min": 0.285,
+    "cross_split_sim_mean": 0.4409,
+    "cross_split_sim_max": 0.8711,
+    "mean_words": 154.8
+  },
+  "v0_entities_masked": {
+    "bases": 60,
+    "distinct_narratives": 60,
+    "cross_split_pairs": 837,
+    "cross_split_pairs_above_0.9": 1,
+    "cross_split_sim_min": 0.2917,
+    "cross_split_sim_mean": 0.4542,
+    "cross_split_sim_max": 0.9381,
+    "mean_words": 149.3
+  },
+  "v0_scenarios": {
+    "cheating": 14,
+    "house_theft": 16,
+    "vehicle_theft": 15,
+    "assault": 15
+  },
+  "v0_doc_types": {
+    "CHARGESHEET": 21,
+    "FIR": 24,
+    "STATEMENT": 15
+  },
+  "v0_distinct_masked_sentences": 299,
+  "v0_sentences_used_by_over_half_of_bases": 0,
+  "v2_raw": {
+    "bases": 50,
+    "distinct_narratives": 50,
+    "cross_split_pairs": 592,
+    "cross_split_pairs_above_0.9": 592,
+    "cross_split_sim_min": 0.9321,
+    "cross_split_sim_mean": 0.9551,
+    "cross_split_sim_max": 0.9968,
+    "mean_words": 46.0
+  },
+  "v2_ids_masked": {
+    "bases": 50,
+    "distinct_narratives": 5,
+    "cross_split_pairs": 592,
+    "cross_split_pairs_above_0.9": 592,
+    "cross_split_sim_min": 0.9394,
+    "cross_split_sim_mean": 0.962,
+    "cross_split_sim_max": 1.0,
+    "mean_words": 46.0
+  }
+}

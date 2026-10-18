@@ -1,0 +1,20 @@
+# Integration-test overlay. Never use it for a demo.
+#
+#   docker compose -f docker-compose.yml -f docker/compose.integration.yml up -d --build --wait
+#   PRAMAAN_IT=1 python -m pytest tests/integration -v
+#
+# It publishes PostgreSQL and the SeaweedFS S3 port on 127.0.0.1 only, so the tests on the
+# host can reach them, and turns on the development identity headers for the API.
+# Docker does not publish ports of a container that is only on an internal network, so
+# the two services also join the "web" network here.
+services:
+  postgres:
+    networks: [backend, web]
+    ports: ["127.0.0.1:55432:5432"]
+  seaweedfs:
+    networks: [backend, web]
+    ports: ["127.0.0.1:58333:8333"]
+  api:
+    environment:
+      PRAMAAN_ENV: dev
+      PRAMAAN_DEV_IDENTITY: "true"

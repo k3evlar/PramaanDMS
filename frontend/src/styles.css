@@ -1,0 +1,31 @@
+:root {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #1a1a1a;
+  background: #f7f7f5;
+}
+body {
+  margin: 0;
+}
+.page {
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.lead {
+  font-size: 1.1rem;
+}
+.status {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #eceae4;
+}
+.status-available {
+  background: #e3f1e5;
+}
+.status-unavailable {
+  background: #f6e3e1;
+}
+.note {
+  color: #555;
+  font-size: 0.9rem;
+}

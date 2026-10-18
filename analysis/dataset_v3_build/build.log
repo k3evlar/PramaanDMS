@@ -1,0 +1,16 @@
+{
+ "bases": 200,
+ "versions": 3000,
+ "samples": 9000,
+ "split_hashes": {
+  "train": "0d43be9408faab62b2c256ff9eb5dbf036d7782f229a4d4478803e35720aa25f",
+  "val": "72e5bdc0cf943e42eea294679be68c5096bb5a81297b021cd958999f10617587",
+  "test": "5a2ea661148282faffc969be9c1f6914f8405ac1dced0655e8fe486b662ba91f"
+ },
+ "dataset_hash": "916440f06ccf3ad08f2845e60f23b36bb795256383d22258e83d21cb00a3a710"
+}
+
+real	26m23.678s
+user	0m0.031s
+sys	0m0.000s
+exit=0

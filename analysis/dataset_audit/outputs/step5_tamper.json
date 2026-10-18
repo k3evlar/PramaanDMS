@@ -1,0 +1,2359 @@
+{
+  "pairs_checked": 800,
+  "per_class": {
+    "E0": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E1": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E2": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E3": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E4": {
+      "checked": 50,
+      "pass": 42,
+      "fail": 8,
+      "verdict": "PARTIAL",
+      "first_failure": {
+        "sample_id": "BASE-0004-E4",
+        "reason": "original has no amount ('Not applicable in this synthetic record'); edit inserts an amount instead of changing one"
+      },
+      "failure_ids": [
+        "BASE-0004-E4",
+        "BASE-0012-E4",
+        "BASE-0018-E4",
+        "BASE-0021-E4",
+        "BASE-0028-E4",
+        "BASE-0033-E4",
+        "BASE-0037-E4",
+        "BASE-0038-E4"
+      ],
+      "notes": {}
+    },
+    "E5": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E6": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E7": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E8": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E9": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E10": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E11": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL",
+      "first_failure": {
+        "sample_id": "BASE-0001-E11",
+        "reason": "rewrite, not a deletion: new words ['description', 'further', 'provided', 'was'] were added ('A sealed sample parcel was recorded; no further description is provided.')"
+      },
+      "failure_ids": [
+        "BASE-0001-E11",
+        "BASE-0002-E11",
+        "BASE-0003-E11",
+        "BASE-0004-E11",
+        "BASE-0005-E11",
+        "BASE-0006-E11",
+        "BASE-0007-E11",
+        "BASE-0008-E11",
+        "BASE-0009-E11",
+        "BASE-0010-E11",
+        "BASE-0011-E11",
+        "BASE-0012-E11",
+        "BASE-0013-E11",
+        "BASE-0014-E11",
+        "BASE-0015-E11",
+        "BASE-0016-E11",
+        "BASE-0017-E11",
+        "BASE-0018-E11",
+        "BASE-0019-E11",
+        "BASE-0020-E11",
+        "BASE-0021-E11",
+        "BASE-0022-E11",
+        "BASE-0023-E11",
+        "BASE-0024-E11",
+        "BASE-0025-E11",
+        "BASE-0026-E11",
+        "BASE-0027-E11",
+        "BASE-0028-E11",
+        "BASE-0029-E11",
+        "BASE-0030-E11",
+        "BASE-0031-E11",
+        "BASE-0032-E11",
+        "BASE-0033-E11",
+        "BASE-0034-E11",
+        "BASE-0035-E11",
+        "BASE-0036-E11",
+        "BASE-0037-E11",
+        "BASE-0038-E11",
+        "BASE-0039-E11",
+        "BASE-0040-E11",
+        "BASE-0041-E11",
+        "BASE-0042-E11",
+        "BASE-0043-E11",
+        "BASE-0044-E11",
+        "BASE-0045-E11",
+        "BASE-0046-E11",
+        "BASE-0047-E11",
+        "BASE-0048-E11",
+        "BASE-0049-E11",
+        "BASE-0050-E11"
+      ],
+      "notes": {}
+    },
+    "E12": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL",
+      "first_failure": {
+        "sample_id": "BASE-0001-E12",
+        "reason": "a whole sentence was appended (clause insertion, same as E10): 'The record states that the parcel must be treated as accounted for .'"
+      },
+      "failure_ids": [
+        "BASE-0001-E12",
+        "BASE-0002-E12",
+        "BASE-0003-E12",
+        "BASE-0004-E12",
+        "BASE-0005-E12",
+        "BASE-0006-E12",
+        "BASE-0007-E12",
+        "BASE-0008-E12",
+        "BASE-0009-E12",
+        "BASE-0010-E12",
+        "BASE-0011-E12",
+        "BASE-0012-E12",
+        "BASE-0013-E12",
+        "BASE-0014-E12",
+        "BASE-0015-E12",
+        "BASE-0016-E12",
+        "BASE-0017-E12",
+        "BASE-0018-E12",
+        "BASE-0019-E12",
+        "BASE-0020-E12",
+        "BASE-0021-E12",
+        "BASE-0022-E12",
+        "BASE-0023-E12",
+        "BASE-0024-E12",
+        "BASE-0025-E12",
+        "BASE-0026-E12",
+        "BASE-0027-E12",
+        "BASE-0028-E12",
+        "BASE-0029-E12",
+        "BASE-0030-E12",
+        "BASE-0031-E12",
+        "BASE-0032-E12",
+        "BASE-0033-E12",
+        "BASE-0034-E12",
+        "BASE-0035-E12",
+        "BASE-0036-E12",
+        "BASE-0037-E12",
+        "BASE-0038-E12",
+        "BASE-0039-E12",
+        "BASE-0040-E12",
+        "BASE-0041-E12",
+        "BASE-0042-E12",
+        "BASE-0043-E12",
+        "BASE-0044-E12",
+        "BASE-0045-E12",
+        "BASE-0046-E12",
+        "BASE-0047-E12",
+        "BASE-0048-E12",
+        "BASE-0049-E12",
+        "BASE-0050-E12"
+      ],
+      "notes": {}
+    },
+    "E13": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS",
+      "first_failure": null,
+      "failure_ids": [],
+      "notes": {}
+    },
+    "E14": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL",
+      "first_failure": {
+        "sample_id": "BASE-0001-E14",
+        "reason": "printed dates moved earlier, but no file metadata was changed or logged; this is a two-date E2 edit, not the metadata inconsistency E14 defines"
+      },
+      "failure_ids": [
+        "BASE-0001-E14",
+        "BASE-0002-E14",
+        "BASE-0003-E14",
+        "BASE-0004-E14",
+        "BASE-0005-E14",
+        "BASE-0006-E14",
+        "BASE-0007-E14",
+        "BASE-0008-E14",
+        "BASE-0009-E14",
+        "BASE-0010-E14",
+        "BASE-0011-E14",
+        "BASE-0012-E14",
+        "BASE-0013-E14",
+        "BASE-0014-E14",
+        "BASE-0015-E14",
+        "BASE-0016-E14",
+        "BASE-0017-E14",
+        "BASE-0018-E14",
+        "BASE-0019-E14",
+        "BASE-0020-E14",
+        "BASE-0021-E14",
+        "BASE-0022-E14",
+        "BASE-0023-E14",
+        "BASE-0024-E14",
+        "BASE-0025-E14",
+        "BASE-0026-E14",
+        "BASE-0027-E14",
+        "BASE-0028-E14",
+        "BASE-0029-E14",
+        "BASE-0030-E14",
+        "BASE-0031-E14",
+        "BASE-0032-E14",
+        "BASE-0033-E14",
+        "BASE-0034-E14",
+        "BASE-0035-E14",
+        "BASE-0036-E14",
+        "BASE-0037-E14",
+        "BASE-0038-E14",
+        "BASE-0039-E14",
+        "BASE-0040-E14",
+        "BASE-0041-E14",
+        "BASE-0042-E14",
+        "BASE-0043-E14",
+        "BASE-0044-E14",
+        "BASE-0045-E14",
+        "BASE-0046-E14",
+        "BASE-0047-E14",
+        "BASE-0048-E14",
+        "BASE-0049-E14",
+        "BASE-0050-E14"
+      ],
+      "notes": {}
+    },
+    "E15": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL",
+      "first_failure": {
+        "sample_id": "BASE-0001-E15",
+        "reason": "seal change is a printed text swap that spells out the class ('ALTERED SYNTHETIC SEAL REGION - E15 TEST'); no signature or seal image is altered"
+      },
+      "failure_ids": [
+        "BASE-0001-E15",
+        "BASE-0002-E15",
+        "BASE-0003-E15",
+        "BASE-0004-E15",
+        "BASE-0005-E15",
+        "BASE-0006-E15",
+        "BASE-0007-E15",
+        "BASE-0008-E15",
+        "BASE-0009-E15",
+        "BASE-0010-E15",
+        "BASE-0011-E15",
+        "BASE-0012-E15",
+        "BASE-0013-E15",
+        "BASE-0014-E15",
+        "BASE-0015-E15",
+        "BASE-0016-E15",
+        "BASE-0017-E15",
+        "BASE-0018-E15",
+        "BASE-0019-E15",
+        "BASE-0020-E15",
+        "BASE-0021-E15",
+        "BASE-0022-E15",
+        "BASE-0023-E15",
+        "BASE-0024-E15",
+        "BASE-0025-E15",
+        "BASE-0026-E15",
+        "BASE-0027-E15",
+        "BASE-0028-E15",
+        "BASE-0029-E15",
+        "BASE-0030-E15",
+        "BASE-0031-E15",
+        "BASE-0032-E15",
+        "BASE-0033-E15",
+        "BASE-0034-E15",
+        "BASE-0035-E15",
+        "BASE-0036-E15",
+        "BASE-0037-E15",
+        "BASE-0038-E15",
+        "BASE-0039-E15",
+        "BASE-0040-E15",
+        "BASE-0041-E15",
+        "BASE-0042-E15",
+        "BASE-0043-E15",
+        "BASE-0044-E15",
+        "BASE-0045-E15",
+        "BASE-0046-E15",
+        "BASE-0047-E15",
+        "BASE-0048-E15",
+        "BASE-0049-E15",
+        "BASE-0050-E15"
+      ],
+      "notes": {}
+    }
+  },
+  "pairs_with_header_label_leak": 800,
+  "harmless_with_structured_change": [],
+  "new_value_not_printed": [],
+  "change_log_vs_json_mismatch": [],
+  "examples": {
+    "E0": [
+      {
+        "sample_id": "BASE-0013-E0",
+        "original_id": "BASE-0013",
+        "split": "train",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0013 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0013-E0 Document type: FIR",
+          "+Controlled synthetic variant: E0."
+        ],
+        "pass": true,
+        "reason": "content identical; only header differs"
+      },
+      {
+        "sample_id": "BASE-0022-E0",
+        "original_id": "BASE-0022",
+        "split": "train",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0022 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0022-E0 Document type: charge_sheet",
+          "+Controlled synthetic variant: E0."
+        ],
+        "pass": true,
+        "reason": "content identical; only header differs"
+      },
+      {
+        "sample_id": "BASE-0050-E0",
+        "original_id": "BASE-0050",
+        "split": "train",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0050 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0050-E0 Document type: charge_sheet",
+          "+Controlled synthetic variant: E0."
+        ],
+        "pass": true,
+        "reason": "content identical; only header differs"
+      },
+      {
+        "sample_id": "BASE-0005-E0",
+        "original_id": "BASE-0005",
+        "split": "train",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0005 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0005-E0 Document type: FIR",
+          "+Controlled synthetic variant: E0."
+        ],
+        "pass": true,
+        "reason": "content identical; only header differs"
+      },
+      {
+        "sample_id": "BASE-0030-E0",
+        "original_id": "BASE-0030",
+        "split": "test",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0030 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0030-E0 Document type: charge_sheet",
+          "+Controlled synthetic variant: E0."
+        ],
+        "pass": true,
+        "reason": "content identical; only header differs"
+      }
+    ],
+    "E1": [
+      {
+        "sample_id": "BASE-0033-E1",
+        "original_id": "BASE-0033",
+        "split": "train",
+        "fields_changed": [
+          "accused_name"
+        ],
+        "old": {
+          "accused_name": "Finley Hart"
+        },
+        "new": {
+          "accused_name": "Quinn Sampleton"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0033 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0033-E1 Document type: FIR",
+          "+Controlled synthetic variant: E1.",
+          "-accused_name Finley Hart",
+          "+accused_name Quinn Sampleton"
+        ],
+        "pass": true,
+        "reason": "accused_name: 'Finley Hart' -> 'Quinn Sampleton'"
+      },
+      {
+        "sample_id": "BASE-0035-E1",
+        "original_id": "BASE-0035",
+        "split": "test",
+        "fields_changed": [
+          "accused_name"
+        ],
+        "old": {
+          "accused_name": "Parker Wren"
+        },
+        "new": {
+          "accused_name": "Quinn Sampleton"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0035 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0035-E1 Document type: statement",
+          "+Controlled synthetic variant: E1.",
+          "-accused_name Parker Wren",
+          "+accused_name Quinn Sampleton"
+        ],
+        "pass": true,
+        "reason": "accused_name: 'Parker Wren' -> 'Quinn Sampleton'"
+      },
+      {
+        "sample_id": "BASE-0008-E1",
+        "original_id": "BASE-0008",
+        "split": "train",
+        "fields_changed": [
+          "accused_name"
+        ],
+        "old": {
+          "accused_name": "Cameron Blake"
+        },
+        "new": {
+          "accused_name": "Quinn Sampleton"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0008 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0008-E1 Document type: court_order",
+          "+Controlled synthetic variant: E1.",
+          "-accused_name Cameron Blake",
+          "+accused_name Quinn Sampleton"
+        ],
+        "pass": true,
+        "reason": "accused_name: 'Cameron Blake' -> 'Quinn Sampleton'"
+      },
+      {
+        "sample_id": "BASE-0015-E1",
+        "original_id": "BASE-0015",
+        "split": "train",
+        "fields_changed": [
+          "accused_name"
+        ],
+        "old": {
+          "accused_name": "Robin Mercer"
+        },
+        "new": {
+          "accused_name": "Quinn Sampleton"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0015 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0015-E1 Document type: statement",
+          "+Controlled synthetic variant: E1.",
+          "-accused_name Robin Mercer",
+          "+accused_name Quinn Sampleton"
+        ],
+        "pass": true,
+        "reason": "accused_name: 'Robin Mercer' -> 'Quinn Sampleton'"
+      },
+      {
+        "sample_id": "BASE-0004-E1",
+        "original_id": "BASE-0004",
+        "split": "test",
+        "fields_changed": [
+          "accused_name"
+        ],
+        "old": {
+          "accused_name": "Riley Quinn"
+        },
+        "new": {
+          "accused_name": "Quinn Sampleton"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0004 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0004-E1 Document type: court_order",
+          "+Controlled synthetic variant: E1.",
+          "-accused_name Riley Quinn",
+          "+accused_name Quinn Sampleton"
+        ],
+        "pass": true,
+        "reason": "accused_name: 'Riley Quinn' -> 'Quinn Sampleton'"
+      }
+    ],
+    "E2": [
+      {
+        "sample_id": "BASE-0040-E2",
+        "original_id": "BASE-0040",
+        "split": "test",
+        "fields_changed": [
+          "incident_date"
+        ],
+        "old": {
+          "incident_date": "2026-05-03"
+        },
+        "new": {
+          "incident_date": "2026-10-27"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0040 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0040-E2 Document type: court_order",
+          "+Controlled synthetic variant: E2.",
+          "-incident_date 2026-05-03",
+          "+incident_date 2026-10-27"
+        ],
+        "pass": true,
+        "reason": "incident_date: 2026-05-03 -> 2026-10-27"
+      },
+      {
+        "sample_id": "BASE-0018-E2",
+        "original_id": "BASE-0018",
+        "split": "train",
+        "fields_changed": [
+          "incident_date"
+        ],
+        "old": {
+          "incident_date": "2026-01-21"
+        },
+        "new": {
+          "incident_date": "2026-10-27"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0018 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0018-E2 Document type: charge_sheet",
+          "+Controlled synthetic variant: E2.",
+          "-incident_date 2026-01-21",
+          "+incident_date 2026-10-27"
+        ],
+        "pass": true,
+        "reason": "incident_date: 2026-01-21 -> 2026-10-27"
+      },
+      {
+        "sample_id": "BASE-0017-E2",
+        "original_id": "BASE-0017",
+        "split": "test",
+        "fields_changed": [
+          "incident_date"
+        ],
+        "old": {
+          "incident_date": "2026-09-20"
+        },
+        "new": {
+          "incident_date": "2026-10-27"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0017 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0017-E2 Document type: FIR",
+          "+Controlled synthetic variant: E2.",
+          "-incident_date 2026-09-20",
+          "+incident_date 2026-10-27"
+        ],
+        "pass": true,
+        "reason": "incident_date: 2026-09-20 -> 2026-10-27"
+      },
+      {
+        "sample_id": "BASE-0037-E2",
+        "original_id": "BASE-0037",
+        "split": "train",
+        "fields_changed": [
+          "incident_date"
+        ],
+        "old": {
+          "incident_date": "2026-02-20"
+        },
+        "new": {
+          "incident_date": "2026-10-27"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0037 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0037-E2 Document type: FIR",
+          "+Controlled synthetic variant: E2.",
+          "-incident_date 2026-02-20",
+          "+incident_date 2026-10-27"
+        ],
+        "pass": true,
+        "reason": "incident_date: 2026-02-20 -> 2026-10-27"
+      },
+      {
+        "sample_id": "BASE-0012-E2",
+        "original_id": "BASE-0012",
+        "split": "test",
+        "fields_changed": [
+          "incident_date"
+        ],
+        "old": {
+          "incident_date": "2026-04-15"
+        },
+        "new": {
+          "incident_date": "2026-10-27"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0012 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0012-E2 Document type: court_order",
+          "+Controlled synthetic variant: E2.",
+          "-incident_date 2026-04-15",
+          "+incident_date 2026-10-27"
+        ],
+        "pass": true,
+        "reason": "incident_date: 2026-04-15 -> 2026-10-27"
+      }
+    ],
+    "E3": [
+      {
+        "sample_id": "BASE-0047-E3",
+        "original_id": "BASE-0047",
+        "split": "train",
+        "fields_changed": [
+          "incident_time"
+        ],
+        "old": {
+          "incident_time": "11:40 PM"
+        },
+        "new": {
+          "incident_time": "11:40 AM"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0047 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0047-E3 Document type: statement",
+          "+Controlled synthetic variant: E3.",
+          "-incident_time 11:40 PM",
+          "+incident_time 11:40 AM"
+        ],
+        "pass": true,
+        "reason": "incident_time: 11:40 PM -> 11:40 AM"
+      },
+      {
+        "sample_id": "BASE-0035-E3",
+        "original_id": "BASE-0035",
+        "split": "test",
+        "fields_changed": [
+          "incident_time"
+        ],
+        "old": {
+          "incident_time": "07:10 AM"
+        },
+        "new": {
+          "incident_time": "11:40 AM"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0035 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0035-E3 Document type: statement",
+          "+Controlled synthetic variant: E3.",
+          "-incident_time 07:10 AM",
+          "+incident_time 11:40 AM"
+        ],
+        "pass": true,
+        "reason": "incident_time: 07:10 AM -> 11:40 AM"
+      },
+      {
+        "sample_id": "BASE-0033-E3",
+        "original_id": "BASE-0033",
+        "split": "train",
+        "fields_changed": [
+          "incident_time"
+        ],
+        "old": {
+          "incident_time": "02:25 PM"
+        },
+        "new": {
+          "incident_time": "11:40 AM"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0033 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0033-E3 Document type: FIR",
+          "+Controlled synthetic variant: E3.",
+          "-incident_time 02:25 PM",
+          "+incident_time 11:40 AM"
+        ],
+        "pass": true,
+        "reason": "incident_time: 02:25 PM -> 11:40 AM"
+      },
+      {
+        "sample_id": "BASE-0004-E3",
+        "original_id": "BASE-0004",
+        "split": "test",
+        "fields_changed": [
+          "incident_time"
+        ],
+        "old": {
+          "incident_time": "11:40 PM"
+        },
+        "new": {
+          "incident_time": "11:40 AM"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0004 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0004-E3 Document type: court_order",
+          "+Controlled synthetic variant: E3.",
+          "-incident_time 11:40 PM",
+          "+incident_time 11:40 AM"
+        ],
+        "pass": true,
+        "reason": "incident_time: 11:40 PM -> 11:40 AM"
+      },
+      {
+        "sample_id": "BASE-0016-E3",
+        "original_id": "BASE-0016",
+        "split": "train",
+        "fields_changed": [
+          "incident_time"
+        ],
+        "old": {
+          "incident_time": "02:25 PM"
+        },
+        "new": {
+          "incident_time": "11:40 AM"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0016 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0016-E3 Document type: court_order",
+          "+Controlled synthetic variant: E3.",
+          "-incident_time 02:25 PM",
+          "+incident_time 11:40 AM"
+        ],
+        "pass": true,
+        "reason": "incident_time: 02:25 PM -> 11:40 AM"
+      }
+    ],
+    "E4": [
+      {
+        "sample_id": "BASE-0009-E4",
+        "original_id": "BASE-0009",
+        "split": "validation",
+        "fields_changed": [
+          "monetary_amount"
+        ],
+        "old": {
+          "monetary_amount": "Rs 50,000"
+        },
+        "new": {
+          "monetary_amount": "Rs 9,99,999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0009 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0009-E4 Document type: FIR",
+          "+Controlled synthetic variant: E4.",
+          "-monetary_amount Rs 50,000",
+          "+monetary_amount Rs 9,99,999"
+        ],
+        "pass": true,
+        "reason": "Rs 50,000 -> Rs 9,99,999"
+      },
+      {
+        "sample_id": "BASE-0041-E4",
+        "original_id": "BASE-0041",
+        "split": "train",
+        "fields_changed": [
+          "monetary_amount"
+        ],
+        "old": {
+          "monetary_amount": "Rs 50,000"
+        },
+        "new": {
+          "monetary_amount": "Rs 9,99,999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0041 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0041-E4 Document type: FIR",
+          "+Controlled synthetic variant: E4.",
+          "-monetary_amount Rs 50,000",
+          "+monetary_amount Rs 9,99,999"
+        ],
+        "pass": true,
+        "reason": "Rs 50,000 -> Rs 9,99,999"
+      },
+      {
+        "sample_id": "BASE-0008-E4",
+        "original_id": "BASE-0008",
+        "split": "train",
+        "fields_changed": [
+          "monetary_amount"
+        ],
+        "old": {
+          "monetary_amount": "Rs 75,000"
+        },
+        "new": {
+          "monetary_amount": "Rs 9,99,999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0008 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0008-E4 Document type: court_order",
+          "+Controlled synthetic variant: E4.",
+          "-monetary_amount Rs 75,000",
+          "+monetary_amount Rs 9,99,999"
+        ],
+        "pass": true,
+        "reason": "Rs 75,000 -> Rs 9,99,999"
+      },
+      {
+        "sample_id": "BASE-0005-E4",
+        "original_id": "BASE-0005",
+        "split": "train",
+        "fields_changed": [
+          "monetary_amount"
+        ],
+        "old": {
+          "monetary_amount": "Rs 5,00,000"
+        },
+        "new": {
+          "monetary_amount": "Rs 9,99,999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0005 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0005-E4 Document type: FIR",
+          "+Controlled synthetic variant: E4.",
+          "-monetary_amount Rs 5,00,000",
+          "+monetary_amount Rs 9,99,999"
+        ],
+        "pass": true,
+        "reason": "Rs 5,00,000 -> Rs 9,99,999"
+      },
+      {
+        "sample_id": "BASE-0038-E4",
+        "original_id": "BASE-0038",
+        "split": "train",
+        "fields_changed": [
+          "monetary_amount"
+        ],
+        "old": {
+          "monetary_amount": "Not applicable in this synthetic record"
+        },
+        "new": {
+          "monetary_amount": "Rs 9,99,999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0038 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0038-E4 Document type: charge_sheet",
+          "+Controlled synthetic variant: E4.",
+          "-monetary_amount Not applicable in this synthetic record",
+          "+monetary_amount Rs 9,99,999"
+        ],
+        "pass": false,
+        "reason": "original has no amount ('Not applicable in this synthetic record'); edit inserts an amount instead of changing one"
+      }
+    ],
+    "E5": [
+      {
+        "sample_id": "BASE-0015-E5",
+        "original_id": "BASE-0015",
+        "split": "train",
+        "fields_changed": [
+          "act_name",
+          "section_number"
+        ],
+        "old": {
+          "act_name": "Sample Evidence Protection Act",
+          "section_number": "Section 24"
+        },
+        "new": {
+          "act_name": "Fictional Restricted Materials Act",
+          "section_number": "Section 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0015 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0015-E5 Document type: statement",
+          "+Controlled synthetic variant: E5.",
+          "-act_name Sample Evidence Protection Act",
+          "-section_number Section 24",
+          "+act_name Fictional Restricted Materials Act",
+          "+section_number Section 99"
+        ],
+        "pass": true,
+        "reason": "Sample Evidence Protection Act Section 24 -> Fictional Restricted Materials Act Section 99"
+      },
+      {
+        "sample_id": "BASE-0039-E5",
+        "original_id": "BASE-0039",
+        "split": "train",
+        "fields_changed": [
+          "act_name",
+          "section_number"
+        ],
+        "old": {
+          "act_name": "Fictional Public Order Act",
+          "section_number": "Section 12"
+        },
+        "new": {
+          "act_name": "Fictional Restricted Materials Act",
+          "section_number": "Section 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0039 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0039-E5 Document type: statement",
+          "+Controlled synthetic variant: E5.",
+          "-act_name Fictional Public Order Act",
+          "-section_number Section 12",
+          "+act_name Fictional Restricted Materials Act",
+          "+section_number Section 99"
+        ],
+        "pass": true,
+        "reason": "Fictional Public Order Act Section 12 -> Fictional Restricted Materials Act Section 99"
+      },
+      {
+        "sample_id": "BASE-0049-E5",
+        "original_id": "BASE-0049",
+        "split": "train",
+        "fields_changed": [
+          "act_name",
+          "section_number"
+        ],
+        "old": {
+          "act_name": "Sample Evidence Protection Act",
+          "section_number": "Section 12"
+        },
+        "new": {
+          "act_name": "Fictional Restricted Materials Act",
+          "section_number": "Section 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0049 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0049-E5 Document type: FIR",
+          "+Controlled synthetic variant: E5.",
+          "-act_name Sample Evidence Protection Act",
+          "-section_number Section 12",
+          "+act_name Fictional Restricted Materials Act",
+          "+section_number Section 99"
+        ],
+        "pass": true,
+        "reason": "Sample Evidence Protection Act Section 12 -> Fictional Restricted Materials Act Section 99"
+      },
+      {
+        "sample_id": "BASE-0014-E5",
+        "original_id": "BASE-0014",
+        "split": "train",
+        "fields_changed": [
+          "act_name",
+          "section_number"
+        ],
+        "old": {
+          "act_name": "Sample Evidence Protection Act",
+          "section_number": "Section 12"
+        },
+        "new": {
+          "act_name": "Fictional Restricted Materials Act",
+          "section_number": "Section 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0014 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0014-E5 Document type: charge_sheet",
+          "+Controlled synthetic variant: E5.",
+          "-act_name Sample Evidence Protection Act",
+          "-section_number Section 12",
+          "+act_name Fictional Restricted Materials Act",
+          "+section_number Section 99"
+        ],
+        "pass": true,
+        "reason": "Sample Evidence Protection Act Section 12 -> Fictional Restricted Materials Act Section 99"
+      },
+      {
+        "sample_id": "BASE-0036-E5",
+        "original_id": "BASE-0036",
+        "split": "train",
+        "fields_changed": [
+          "act_name",
+          "section_number"
+        ],
+        "old": {
+          "act_name": "Fictional Public Order Act",
+          "section_number": "Section 31"
+        },
+        "new": {
+          "act_name": "Fictional Restricted Materials Act",
+          "section_number": "Section 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0036 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0036-E5 Document type: court_order",
+          "+Controlled synthetic variant: E5.",
+          "-act_name Fictional Public Order Act",
+          "-section_number Section 31",
+          "+act_name Fictional Restricted Materials Act",
+          "+section_number Section 99"
+        ],
+        "pass": true,
+        "reason": "Fictional Public Order Act Section 31 -> Fictional Restricted Materials Act Section 99"
+      }
+    ],
+    "E6": [
+      {
+        "sample_id": "BASE-0033-E6",
+        "original_id": "BASE-0033",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Northbridge Sample District. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was not removed from a storage room in Northbridge Sample District. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0033 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0033-E6 Document type: FIR",
+          "+Controlled synthetic variant: E6.",
+          "-was removed from a storage room in Northbridge Sample District. The",
+          "+was not removed from a storage room in Northbridge Sample District. The"
+        ],
+        "pass": true,
+        "reason": "negation insert: ['not']"
+      },
+      {
+        "sample_id": "BASE-0005-E6",
+        "original_id": "BASE-0005",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was not removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0005 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0005-E6 Document type: FIR",
+          "+Controlled synthetic variant: E6.",
+          "-was removed from a storage room in Lakewood Test Quarter. The account",
+          "-is synthetic and created only to test meaning-aware document comparison.",
+          "+was not removed from a storage room in Lakewood Test Quarter. The",
+          "+account is synthetic and created only to test meaning-aware document",
+          "+comparison."
+        ],
+        "pass": true,
+        "reason": "negation insert: ['not']"
+      },
+      {
+        "sample_id": "BASE-0048-E6",
+        "original_id": "BASE-0048",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Redstone Fictional Block. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was not removed from a storage room in Redstone Fictional Block. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0048 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0048-E6 Document type: court_order",
+          "+Controlled synthetic variant: E6.",
+          "-was removed from a storage room in Redstone Fictional Block. The account",
+          "-is synthetic and created only to test meaning-aware document comparison.",
+          "+was not removed from a storage room in Redstone Fictional Block. The",
+          "+account is synthetic and created only to test meaning-aware document",
+          "+comparison."
+        ],
+        "pass": true,
+        "reason": "negation insert: ['not']"
+      },
+      {
+        "sample_id": "BASE-0007-E6",
+        "original_id": "BASE-0007",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Eastvale Sample Sector. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was not removed from a storage room in Eastvale Sample Sector. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0007 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0007-E6 Document type: statement",
+          "+Controlled synthetic variant: E6.",
+          "-was removed from a storage room in Eastvale Sample Sector. The account",
+          "-is synthetic and created only to test meaning-aware document comparison.",
+          "+was not removed from a storage room in Eastvale Sample Sector. The",
+          "+account is synthetic and created only to test meaning-aware document",
+          "+comparison."
+        ],
+        "pass": true,
+        "reason": "negation insert: ['not']"
+      },
+      {
+        "sample_id": "BASE-0044-E6",
+        "original_id": "BASE-0044",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was not removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0044 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0044-E6 Document type: court_order",
+          "+Controlled synthetic variant: E6.",
+          "-was removed from a storage room in Lakewood Test Quarter. The account",
+          "-is synthetic and created only to test meaning-aware document comparison.",
+          "+was not removed from a storage room in Lakewood Test Quarter. The",
+          "+account is synthetic and created only to test meaning-aware document",
+          "+comparison."
+        ],
+        "pass": true,
+        "reason": "negation insert: ['not']"
+      }
+    ],
+    "E7": [
+      {
+        "sample_id": "BASE-0044-E7",
+        "original_id": "BASE-0044",
+        "split": "train",
+        "fields_changed": [
+          "accused_name",
+          "complainant_name"
+        ],
+        "old": {
+          "accused_name": "Finley Hart",
+          "complainant_name": "Kendall Rivers"
+        },
+        "new": {
+          "accused_name": "Kendall Rivers",
+          "complainant_name": "Finley Hart"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0044 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0044-E7 Document type: court_order",
+          "+Controlled synthetic variant: E7.",
+          "-complainant_name Kendall Rivers",
+          "-accused_name Finley Hart",
+          "+complainant_name Finley Hart",
+          "+accused_name Kendall Rivers"
+        ],
+        "pass": true,
+        "reason": "complainant and accused swapped"
+      },
+      {
+        "sample_id": "BASE-0032-E7",
+        "original_id": "BASE-0032",
+        "split": "train",
+        "fields_changed": [
+          "accused_name",
+          "complainant_name"
+        ],
+        "old": {
+          "accused_name": "Skyler Hayes",
+          "complainant_name": "Robin Mercer"
+        },
+        "new": {
+          "accused_name": "Robin Mercer",
+          "complainant_name": "Skyler Hayes"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0032 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0032-E7 Document type: court_order",
+          "+Controlled synthetic variant: E7.",
+          "-complainant_name Robin Mercer",
+          "-accused_name Skyler Hayes",
+          "+complainant_name Skyler Hayes",
+          "+accused_name Robin Mercer"
+        ],
+        "pass": true,
+        "reason": "complainant and accused swapped"
+      },
+      {
+        "sample_id": "BASE-0001-E7",
+        "original_id": "BASE-0001",
+        "split": "test",
+        "fields_changed": [
+          "accused_name",
+          "complainant_name"
+        ],
+        "old": {
+          "accused_name": "Avery Rowan",
+          "complainant_name": "Taylor Reed"
+        },
+        "new": {
+          "accused_name": "Taylor Reed",
+          "complainant_name": "Avery Rowan"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0001 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0001-E7 Document type: FIR",
+          "+Controlled synthetic variant: E7.",
+          "-complainant_name Taylor Reed",
+          "-accused_name Avery Rowan",
+          "+complainant_name Avery Rowan",
+          "+accused_name Taylor Reed"
+        ],
+        "pass": true,
+        "reason": "complainant and accused swapped"
+      },
+      {
+        "sample_id": "BASE-0005-E7",
+        "original_id": "BASE-0005",
+        "split": "train",
+        "fields_changed": [
+          "accused_name",
+          "complainant_name"
+        ],
+        "old": {
+          "accused_name": "Riley Quinn",
+          "complainant_name": "Kendall Rivers"
+        },
+        "new": {
+          "accused_name": "Kendall Rivers",
+          "complainant_name": "Riley Quinn"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0005 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0005-E7 Document type: FIR",
+          "+Controlled synthetic variant: E7.",
+          "-complainant_name Kendall Rivers",
+          "-accused_name Riley Quinn",
+          "+complainant_name Riley Quinn",
+          "+accused_name Kendall Rivers"
+        ],
+        "pass": true,
+        "reason": "complainant and accused swapped"
+      },
+      {
+        "sample_id": "BASE-0036-E7",
+        "original_id": "BASE-0036",
+        "split": "train",
+        "fields_changed": [
+          "accused_name",
+          "complainant_name"
+        ],
+        "old": {
+          "accused_name": "Jordan Vale",
+          "complainant_name": "Parker Wren"
+        },
+        "new": {
+          "accused_name": "Parker Wren",
+          "complainant_name": "Jordan Vale"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0036 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0036-E7 Document type: court_order",
+          "+Controlled synthetic variant: E7.",
+          "-complainant_name Parker Wren",
+          "-accused_name Jordan Vale",
+          "+complainant_name Jordan Vale",
+          "+accused_name Parker Wren"
+        ],
+        "pass": true,
+        "reason": "complainant and accused swapped"
+      }
+    ],
+    "E8": [
+      {
+        "sample_id": "BASE-0007-E8",
+        "original_id": "BASE-0007",
+        "split": "train",
+        "fields_changed": [
+          "incident_location"
+        ],
+        "old": {
+          "incident_location": "Eastvale Sample Sector"
+        },
+        "new": {
+          "incident_location": "Southport Fictional Yard"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0007 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0007-E8 Document type: statement",
+          "+Controlled synthetic variant: E8.",
+          "-incident_location Eastvale Sample Sector",
+          "+incident_location Southport Fictional Yard"
+        ],
+        "pass": true,
+        "reason": "incident_location: 'Eastvale Sample Sector' -> 'Southport Fictional Yard' (narrative and jurisdiction still name the old place)"
+      },
+      {
+        "sample_id": "BASE-0045-E8",
+        "original_id": "BASE-0045",
+        "split": "train",
+        "fields_changed": [
+          "incident_location"
+        ],
+        "old": {
+          "incident_location": "Northbridge Sample District"
+        },
+        "new": {
+          "incident_location": "Southport Fictional Yard"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0045 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0045-E8 Document type: FIR",
+          "+Controlled synthetic variant: E8.",
+          "-incident_location Northbridge Sample District",
+          "+incident_location Southport Fictional Yard"
+        ],
+        "pass": true,
+        "reason": "incident_location: 'Northbridge Sample District' -> 'Southport Fictional Yard' (narrative and jurisdiction still name the old place)"
+      },
+      {
+        "sample_id": "BASE-0011-E8",
+        "original_id": "BASE-0011",
+        "split": "train",
+        "fields_changed": [
+          "incident_location"
+        ],
+        "old": {
+          "incident_location": "Northbridge Sample District"
+        },
+        "new": {
+          "incident_location": "Southport Fictional Yard"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0011 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0011-E8 Document type: statement",
+          "+Controlled synthetic variant: E8.",
+          "-incident_location Northbridge Sample District",
+          "+incident_location Southport Fictional Yard"
+        ],
+        "pass": true,
+        "reason": "incident_location: 'Northbridge Sample District' -> 'Southport Fictional Yard' (narrative and jurisdiction still name the old place)"
+      },
+      {
+        "sample_id": "BASE-0006-E8",
+        "original_id": "BASE-0006",
+        "split": "train",
+        "fields_changed": [
+          "incident_location"
+        ],
+        "old": {
+          "incident_location": "Lakewood Test Quarter"
+        },
+        "new": {
+          "incident_location": "Southport Fictional Yard"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0006 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0006-E8 Document type: charge_sheet",
+          "+Controlled synthetic variant: E8.",
+          "-incident_location Lakewood Test Quarter",
+          "+incident_location Southport Fictional Yard"
+        ],
+        "pass": true,
+        "reason": "incident_location: 'Lakewood Test Quarter' -> 'Southport Fictional Yard' (narrative and jurisdiction still name the old place)"
+      },
+      {
+        "sample_id": "BASE-0041-E8",
+        "original_id": "BASE-0041",
+        "split": "train",
+        "fields_changed": [
+          "incident_location"
+        ],
+        "old": {
+          "incident_location": "Northbridge Sample District"
+        },
+        "new": {
+          "incident_location": "Southport Fictional Yard"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0041 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0041-E8 Document type: FIR",
+          "+Controlled synthetic variant: E8.",
+          "-incident_location Northbridge Sample District",
+          "+incident_location Southport Fictional Yard"
+        ],
+        "pass": true,
+        "reason": "incident_location: 'Northbridge Sample District' -> 'Southport Fictional Yard' (narrative and jurisdiction still name the old place)"
+      }
+    ],
+    "E9": [
+      {
+        "sample_id": "BASE-0038-E9",
+        "original_id": "BASE-0038",
+        "split": "train",
+        "fields_changed": [
+          "evidence_item_id"
+        ],
+        "old": {
+          "evidence_item_id": "EXHIBIT-SYN-S48"
+        },
+        "new": {
+          "evidence_item_id": "EXHIBIT-SYN-Z999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0038 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0038-E9 Document type: charge_sheet",
+          "+Controlled synthetic variant: E9.",
+          "-evidence_item_id EXHIBIT-SYN-S48",
+          "+evidence_item_id EXHIBIT-SYN-Z999"
+        ],
+        "pass": true,
+        "reason": "evidence_item_id: 'EXHIBIT-SYN-S48' -> 'EXHIBIT-SYN-Z999' (evidence_description still cites the old exhibit ID)"
+      },
+      {
+        "sample_id": "BASE-0003-E9",
+        "original_id": "BASE-0003",
+        "split": "train",
+        "fields_changed": [
+          "evidence_item_id"
+        ],
+        "old": {
+          "evidence_item_id": "EXHIBIT-SYN-D13"
+        },
+        "new": {
+          "evidence_item_id": "EXHIBIT-SYN-Z999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0003 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0003-E9 Document type: statement",
+          "+Controlled synthetic variant: E9.",
+          "-evidence_item_id EXHIBIT-SYN-D13",
+          "+evidence_item_id EXHIBIT-SYN-Z999"
+        ],
+        "pass": true,
+        "reason": "evidence_item_id: 'EXHIBIT-SYN-D13' -> 'EXHIBIT-SYN-Z999' (evidence_description still cites the old exhibit ID)"
+      },
+      {
+        "sample_id": "BASE-0037-E9",
+        "original_id": "BASE-0037",
+        "split": "train",
+        "fields_changed": [
+          "evidence_item_id"
+        ],
+        "old": {
+          "evidence_item_id": "EXHIBIT-SYN-R47"
+        },
+        "new": {
+          "evidence_item_id": "EXHIBIT-SYN-Z999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0037 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0037-E9 Document type: FIR",
+          "+Controlled synthetic variant: E9.",
+          "-evidence_item_id EXHIBIT-SYN-R47",
+          "+evidence_item_id EXHIBIT-SYN-Z999"
+        ],
+        "pass": true,
+        "reason": "evidence_item_id: 'EXHIBIT-SYN-R47' -> 'EXHIBIT-SYN-Z999' (evidence_description still cites the old exhibit ID)"
+      },
+      {
+        "sample_id": "BASE-0022-E9",
+        "original_id": "BASE-0022",
+        "split": "train",
+        "fields_changed": [
+          "evidence_item_id"
+        ],
+        "old": {
+          "evidence_item_id": "EXHIBIT-SYN-C32"
+        },
+        "new": {
+          "evidence_item_id": "EXHIBIT-SYN-Z999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0022 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0022-E9 Document type: charge_sheet",
+          "+Controlled synthetic variant: E9.",
+          "-evidence_item_id EXHIBIT-SYN-C32",
+          "+evidence_item_id EXHIBIT-SYN-Z999"
+        ],
+        "pass": true,
+        "reason": "evidence_item_id: 'EXHIBIT-SYN-C32' -> 'EXHIBIT-SYN-Z999' (evidence_description still cites the old exhibit ID)"
+      },
+      {
+        "sample_id": "BASE-0036-E9",
+        "original_id": "BASE-0036",
+        "split": "train",
+        "fields_changed": [
+          "evidence_item_id"
+        ],
+        "old": {
+          "evidence_item_id": "EXHIBIT-SYN-Q46"
+        },
+        "new": {
+          "evidence_item_id": "EXHIBIT-SYN-Z999"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0036 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0036-E9 Document type: court_order",
+          "+Controlled synthetic variant: E9.",
+          "-evidence_item_id EXHIBIT-SYN-Q46",
+          "+evidence_item_id EXHIBIT-SYN-Z999"
+        ],
+        "pass": true,
+        "reason": "evidence_item_id: 'EXHIBIT-SYN-Q46' -> 'EXHIBIT-SYN-Z999' (evidence_description still cites the old exhibit ID)"
+      }
+    ],
+    "E10": [
+      {
+        "sample_id": "BASE-0046-E10",
+        "original_id": "BASE-0046",
+        "split": "validation",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-G56; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-G56; no real evidence is represented. A second fictional witness stated that the parcel was missing."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0046 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0046-E10 Document type: charge_sheet",
+          "+Controlled synthetic variant: E10.",
+          "-evidence is represented.",
+          "+evidence is represented. A second fictional witness stated that the parcel",
+          "+was missing."
+        ],
+        "pass": true,
+        "reason": "inserted: 'A second fictional witness stated that the parcel was missing .'"
+      },
+      {
+        "sample_id": "BASE-0008-E10",
+        "original_id": "BASE-0008",
+        "split": "train",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-I18; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-I18; no real evidence is represented. A second fictional witness stated that the parcel was missing."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0008 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0008-E10 Document type: court_order",
+          "+Controlled synthetic variant: E10.",
+          "-evidence is represented.",
+          "+evidence is represented. A second fictional witness stated that the parcel",
+          "+was missing."
+        ],
+        "pass": true,
+        "reason": "inserted: 'A second fictional witness stated that the parcel was missing .'"
+      },
+      {
+        "sample_id": "BASE-0019-E10",
+        "original_id": "BASE-0019",
+        "split": "train",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-T29; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-T29; no real evidence is represented. A second fictional witness stated that the parcel was missing."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0019 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0019-E10 Document type: statement",
+          "+Controlled synthetic variant: E10.",
+          "-evidence is represented.",
+          "+evidence is represented. A second fictional witness stated that the parcel",
+          "+was missing."
+        ],
+        "pass": true,
+        "reason": "inserted: 'A second fictional witness stated that the parcel was missing .'"
+      },
+      {
+        "sample_id": "BASE-0007-E10",
+        "original_id": "BASE-0007",
+        "split": "train",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-H17; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-H17; no real evidence is represented. A second fictional witness stated that the parcel was missing."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0007 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0007-E10 Document type: statement",
+          "+Controlled synthetic variant: E10.",
+          "-evidence is represented.",
+          "+evidence is represented. A second fictional witness stated that the parcel",
+          "+was missing."
+        ],
+        "pass": true,
+        "reason": "inserted: 'A second fictional witness stated that the parcel was missing .'"
+      },
+      {
+        "sample_id": "BASE-0037-E10",
+        "original_id": "BASE-0037",
+        "split": "train",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-R47; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-R47; no real evidence is represented. A second fictional witness stated that the parcel was missing."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0037 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0037-E10 Document type: FIR",
+          "+Controlled synthetic variant: E10.",
+          "-evidence is represented.",
+          "+evidence is represented. A second fictional witness stated that the parcel",
+          "+was missing."
+        ],
+        "pass": true,
+        "reason": "inserted: 'A second fictional witness stated that the parcel was missing .'"
+      }
+    ],
+    "E11": [
+      {
+        "sample_id": "BASE-0004-E11",
+        "original_id": "BASE-0004",
+        "split": "test",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-E14; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel was recorded; no further description is provided."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0004 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0004-E11 Document type: court_order",
+          "+Controlled synthetic variant: E11.",
+          "-evidence_description A sealed sample parcel recorded as exhibit EXHIBIT-SYN-E14; no real",
+          "-evidence is represented.",
+          "+evidence_description A sealed sample parcel was recorded; no further description is provided."
+        ],
+        "pass": false,
+        "reason": "rewrite, not a deletion: new words ['description', 'further', 'provided', 'was'] were added ('A sealed sample parcel was recorded; no further description is provided.')"
+      },
+      {
+        "sample_id": "BASE-0006-E11",
+        "original_id": "BASE-0006",
+        "split": "train",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-G16; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel was recorded; no further description is provided."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0006 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0006-E11 Document type: charge_sheet",
+          "+Controlled synthetic variant: E11.",
+          "-evidence_description A sealed sample parcel recorded as exhibit EXHIBIT-SYN-G16; no real",
+          "-evidence is represented.",
+          "+evidence_description A sealed sample parcel was recorded; no further description is provided."
+        ],
+        "pass": false,
+        "reason": "rewrite, not a deletion: new words ['description', 'further', 'provided', 'was'] were added ('A sealed sample parcel was recorded; no further description is provided.')"
+      },
+      {
+        "sample_id": "BASE-0046-E11",
+        "original_id": "BASE-0046",
+        "split": "validation",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-G56; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel was recorded; no further description is provided."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0046 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0046-E11 Document type: charge_sheet",
+          "+Controlled synthetic variant: E11.",
+          "-evidence_description A sealed sample parcel recorded as exhibit EXHIBIT-SYN-G56; no real",
+          "-evidence is represented.",
+          "+evidence_description A sealed sample parcel was recorded; no further description is provided."
+        ],
+        "pass": false,
+        "reason": "rewrite, not a deletion: new words ['description', 'further', 'provided', 'was'] were added ('A sealed sample parcel was recorded; no further description is provided.')"
+      },
+      {
+        "sample_id": "BASE-0050-E11",
+        "original_id": "BASE-0050",
+        "split": "train",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-K60; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel was recorded; no further description is provided."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0050 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0050-E11 Document type: charge_sheet",
+          "+Controlled synthetic variant: E11.",
+          "-evidence_description A sealed sample parcel recorded as exhibit EXHIBIT-SYN-K60; no real",
+          "-evidence is represented.",
+          "+evidence_description A sealed sample parcel was recorded; no further description is provided."
+        ],
+        "pass": false,
+        "reason": "rewrite, not a deletion: new words ['description', 'further', 'provided', 'was'] were added ('A sealed sample parcel was recorded; no further description is provided.')"
+      },
+      {
+        "sample_id": "BASE-0030-E11",
+        "original_id": "BASE-0030",
+        "split": "test",
+        "fields_changed": [
+          "evidence_description"
+        ],
+        "old": {
+          "evidence_description": "A sealed sample parcel recorded as exhibit EXHIBIT-SYN-K40; no real evidence is represented."
+        },
+        "new": {
+          "evidence_description": "A sealed sample parcel was recorded; no further description is provided."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0030 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0030-E11 Document type: charge_sheet",
+          "+Controlled synthetic variant: E11.",
+          "-evidence_description A sealed sample parcel recorded as exhibit EXHIBIT-SYN-K40; no real",
+          "-evidence is represented.",
+          "+evidence_description A sealed sample parcel was recorded; no further description is provided."
+        ],
+        "pass": false,
+        "reason": "rewrite, not a deletion: new words ['description', 'further', 'provided', 'was'] were added ('A sealed sample parcel was recorded; no further description is provided.')"
+      }
+    ],
+    "E12": [
+      {
+        "sample_id": "BASE-0034-E12",
+        "original_id": "BASE-0034",
+        "split": "test",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Westmere Fictional Ward. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Westmere Fictional Ward. The account is synthetic and created only to test meaning-aware document comparison. The record states that the parcel must be treated as accounted for."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0034 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0034-E12 Document type: charge_sheet",
+          "+Controlled synthetic variant: E12.",
+          "-comparison.",
+          "+comparison. The record states that the parcel must be treated as accounted",
+          "+for."
+        ],
+        "pass": false,
+        "reason": "a whole sentence was appended (clause insertion, same as E10): 'The record states that the parcel must be treated as accounted for .'"
+      },
+      {
+        "sample_id": "BASE-0015-E12",
+        "original_id": "BASE-0015",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Eastvale Sample Sector. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Eastvale Sample Sector. The account is synthetic and created only to test meaning-aware document comparison. The record states that the parcel must be treated as accounted for."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0015 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0015-E12 Document type: statement",
+          "+Controlled synthetic variant: E12.",
+          "+The record states that the parcel must be treated as accounted for."
+        ],
+        "pass": false,
+        "reason": "a whole sentence was appended (clause insertion, same as E10): 'The record states that the parcel must be treated as accounted for .'"
+      },
+      {
+        "sample_id": "BASE-0048-E12",
+        "original_id": "BASE-0048",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Redstone Fictional Block. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Redstone Fictional Block. The account is synthetic and created only to test meaning-aware document comparison. The record states that the parcel must be treated as accounted for."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0048 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0048-E12 Document type: court_order",
+          "+Controlled synthetic variant: E12.",
+          "+The record states that the parcel must be treated as accounted for."
+        ],
+        "pass": false,
+        "reason": "a whole sentence was appended (clause insertion, same as E10): 'The record states that the parcel must be treated as accounted for .'"
+      },
+      {
+        "sample_id": "BASE-0031-E12",
+        "original_id": "BASE-0031",
+        "split": "validation",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison. The record states that the parcel must be treated as accounted for."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0031 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0031-E12 Document type: statement",
+          "+Controlled synthetic variant: E12.",
+          "+The record states that the parcel must be treated as accounted for."
+        ],
+        "pass": false,
+        "reason": "a whole sentence was appended (clause insertion, same as E10): 'The record states that the parcel must be treated as accounted for .'"
+      },
+      {
+        "sample_id": "BASE-0032-E12",
+        "original_id": "BASE-0032",
+        "split": "train",
+        "fields_changed": [
+          "offence_description"
+        ],
+        "old": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison."
+        },
+        "new": {
+          "offence_description": "In this fictional case, the complainant reported that an unidentified parcel was removed from a storage room in Lakewood Test Quarter. The account is synthetic and created only to test meaning-aware document comparison. The record states that the parcel must be treated as accounted for."
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0032 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0032-E12 Document type: court_order",
+          "+Controlled synthetic variant: E12.",
+          "+The record states that the parcel must be treated as accounted for."
+        ],
+        "pass": false,
+        "reason": "a whole sentence was appended (clause insertion, same as E10): 'The record states that the parcel must be treated as accounted for .'"
+      }
+    ],
+    "E13": [
+      {
+        "sample_id": "BASE-0033-E13",
+        "original_id": "BASE-0033",
+        "split": "train",
+        "fields_changed": [
+          "custody_holder"
+        ],
+        "old": {
+          "custody_holder": "Fictional Evidence Unit 33"
+        },
+        "new": {
+          "custody_holder": "Fictional Evidence Unit 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0033 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0033-E13 Document type: FIR",
+          "+Controlled synthetic variant: E13.",
+          "-custody_holder Fictional Evidence Unit 33",
+          "+custody_holder Fictional Evidence Unit 99"
+        ],
+        "pass": true,
+        "reason": "custody_holder: 'Fictional Evidence Unit 33' -> 'Fictional Evidence Unit 99'"
+      },
+      {
+        "sample_id": "BASE-0028-E13",
+        "original_id": "BASE-0028",
+        "split": "train",
+        "fields_changed": [
+          "custody_holder"
+        ],
+        "old": {
+          "custody_holder": "Fictional Evidence Unit 28"
+        },
+        "new": {
+          "custody_holder": "Fictional Evidence Unit 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0028 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0028-E13 Document type: court_order",
+          "+Controlled synthetic variant: E13.",
+          "-custody_holder Fictional Evidence Unit 28",
+          "+custody_holder Fictional Evidence Unit 99"
+        ],
+        "pass": true,
+        "reason": "custody_holder: 'Fictional Evidence Unit 28' -> 'Fictional Evidence Unit 99'"
+      },
+      {
+        "sample_id": "BASE-0034-E13",
+        "original_id": "BASE-0034",
+        "split": "test",
+        "fields_changed": [
+          "custody_holder"
+        ],
+        "old": {
+          "custody_holder": "Fictional Evidence Unit 34"
+        },
+        "new": {
+          "custody_holder": "Fictional Evidence Unit 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0034 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0034-E13 Document type: charge_sheet",
+          "+Controlled synthetic variant: E13.",
+          "-custody_holder Fictional Evidence Unit 34",
+          "+custody_holder Fictional Evidence Unit 99"
+        ],
+        "pass": true,
+        "reason": "custody_holder: 'Fictional Evidence Unit 34' -> 'Fictional Evidence Unit 99'"
+      },
+      {
+        "sample_id": "BASE-0013-E13",
+        "original_id": "BASE-0013",
+        "split": "train",
+        "fields_changed": [
+          "custody_holder"
+        ],
+        "old": {
+          "custody_holder": "Fictional Evidence Unit 13"
+        },
+        "new": {
+          "custody_holder": "Fictional Evidence Unit 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0013 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0013-E13 Document type: FIR",
+          "+Controlled synthetic variant: E13.",
+          "-custody_holder Fictional Evidence Unit 13",
+          "+custody_holder Fictional Evidence Unit 99"
+        ],
+        "pass": true,
+        "reason": "custody_holder: 'Fictional Evidence Unit 13' -> 'Fictional Evidence Unit 99'"
+      },
+      {
+        "sample_id": "BASE-0002-E13",
+        "original_id": "BASE-0002",
+        "split": "train",
+        "fields_changed": [
+          "custody_holder"
+        ],
+        "old": {
+          "custody_holder": "Fictional Evidence Unit 02"
+        },
+        "new": {
+          "custody_holder": "Fictional Evidence Unit 99"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0002 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0002-E13 Document type: charge_sheet",
+          "+Controlled synthetic variant: E13.",
+          "-custody_holder Fictional Evidence Unit 02",
+          "+custody_holder Fictional Evidence Unit 99"
+        ],
+        "pass": true,
+        "reason": "custody_holder: 'Fictional Evidence Unit 02' -> 'Fictional Evidence Unit 99'"
+      }
+    ],
+    "E14": [
+      {
+        "sample_id": "BASE-0048-E14",
+        "original_id": "BASE-0048",
+        "split": "train",
+        "fields_changed": [
+          "document_date",
+          "filing_date"
+        ],
+        "old": {
+          "document_date": "2026-04-12",
+          "filing_date": "2026-05-12"
+        },
+        "new": {
+          "document_date": "2025-11-29",
+          "filing_date": "2025-12-01"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0048 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0048-E14 Document type: court_order",
+          "+Controlled synthetic variant: E14.",
+          "-filing_date 2026-05-12",
+          "-document_date 2026-04-12",
+          "+filing_date 2025-12-01",
+          "+document_date 2025-11-29"
+        ],
+        "pass": false,
+        "reason": "printed dates moved earlier, but no file metadata was changed or logged; this is a two-date E2 edit, not the metadata inconsistency E14 defines"
+      },
+      {
+        "sample_id": "BASE-0046-E14",
+        "original_id": "BASE-0046",
+        "split": "validation",
+        "fields_changed": [
+          "document_date",
+          "filing_date"
+        ],
+        "old": {
+          "document_date": "2026-02-10",
+          "filing_date": "2026-03-10"
+        },
+        "new": {
+          "document_date": "2025-11-29",
+          "filing_date": "2025-12-01"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0046 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0046-E14 Document type: charge_sheet",
+          "+Controlled synthetic variant: E14.",
+          "-filing_date 2026-03-10",
+          "-document_date 2026-02-10",
+          "+filing_date 2025-12-01",
+          "+document_date 2025-11-29"
+        ],
+        "pass": false,
+        "reason": "printed dates moved earlier, but no file metadata was changed or logged; this is a two-date E2 edit, not the metadata inconsistency E14 defines"
+      },
+      {
+        "sample_id": "BASE-0032-E14",
+        "original_id": "BASE-0032",
+        "split": "train",
+        "fields_changed": [
+          "document_date",
+          "filing_date"
+        ],
+        "old": {
+          "document_date": "2026-06-16",
+          "filing_date": "2026-07-16"
+        },
+        "new": {
+          "document_date": "2025-11-29",
+          "filing_date": "2025-12-01"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0032 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0032-E14 Document type: court_order",
+          "+Controlled synthetic variant: E14.",
+          "-filing_date 2026-07-16",
+          "-document_date 2026-06-16",
+          "+filing_date 2025-12-01",
+          "+document_date 2025-11-29"
+        ],
+        "pass": false,
+        "reason": "printed dates moved earlier, but no file metadata was changed or logged; this is a two-date E2 edit, not the metadata inconsistency E14 defines"
+      },
+      {
+        "sample_id": "BASE-0037-E14",
+        "original_id": "BASE-0037",
+        "split": "train",
+        "fields_changed": [
+          "document_date",
+          "filing_date"
+        ],
+        "old": {
+          "document_date": "2026-02-21",
+          "filing_date": "2026-03-21"
+        },
+        "new": {
+          "document_date": "2025-11-29",
+          "filing_date": "2025-12-01"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0037 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0037-E14 Document type: FIR",
+          "+Controlled synthetic variant: E14.",
+          "-filing_date 2026-03-21",
+          "-document_date 2026-02-21",
+          "+filing_date 2025-12-01",
+          "+document_date 2025-11-29"
+        ],
+        "pass": false,
+        "reason": "printed dates moved earlier, but no file metadata was changed or logged; this is a two-date E2 edit, not the metadata inconsistency E14 defines"
+      },
+      {
+        "sample_id": "BASE-0044-E14",
+        "original_id": "BASE-0044",
+        "split": "train",
+        "fields_changed": [
+          "document_date",
+          "filing_date"
+        ],
+        "old": {
+          "document_date": "2026-09-08",
+          "filing_date": "2026-10-08"
+        },
+        "new": {
+          "document_date": "2025-11-29",
+          "filing_date": "2025-12-01"
+        },
+        "text_diff": [
+          "-Sample ID: BASE-0044 Document type: court_order",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0044-E14 Document type: court_order",
+          "+Controlled synthetic variant: E14.",
+          "-filing_date 2026-10-08",
+          "-document_date 2026-09-08",
+          "+filing_date 2025-12-01",
+          "+document_date 2025-11-29"
+        ],
+        "pass": false,
+        "reason": "printed dates moved earlier, but no file metadata was changed or logged; this is a two-date E2 edit, not the metadata inconsistency E14 defines"
+      }
+    ],
+    "E15": [
+      {
+        "sample_id": "BASE-0013-E15",
+        "original_id": "BASE-0013",
+        "split": "train",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0013 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0013-E15 Document type: FIR",
+          "+Controlled synthetic variant: E15.",
+          "-SYNTHETIC SIGNATURE / SEAL PLACEHOLDER",
+          "+ALTERED SYNTHETIC SEAL REGION — E15 TEST"
+        ],
+        "pass": false,
+        "reason": "seal change is a printed text swap that spells out the class ('ALTERED SYNTHETIC SEAL REGION - E15 TEST'); no signature or seal image is altered"
+      },
+      {
+        "sample_id": "BASE-0047-E15",
+        "original_id": "BASE-0047",
+        "split": "train",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0047 Document type: statement",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0047-E15 Document type: statement",
+          "+Controlled synthetic variant: E15.",
+          "-SYNTHETIC SIGNATURE / SEAL PLACEHOLDER",
+          "+ALTERED SYNTHETIC SEAL REGION — E15 TEST"
+        ],
+        "pass": false,
+        "reason": "seal change is a printed text swap that spells out the class ('ALTERED SYNTHETIC SEAL REGION - E15 TEST'); no signature or seal image is altered"
+      },
+      {
+        "sample_id": "BASE-0002-E15",
+        "original_id": "BASE-0002",
+        "split": "train",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0002 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0002-E15 Document type: charge_sheet",
+          "+Controlled synthetic variant: E15.",
+          "-SYNTHETIC SIGNATURE / SEAL PLACEHOLDER",
+          "+ALTERED SYNTHETIC SEAL REGION — E15 TEST"
+        ],
+        "pass": false,
+        "reason": "seal change is a printed text swap that spells out the class ('ALTERED SYNTHETIC SEAL REGION - E15 TEST'); no signature or seal image is altered"
+      },
+      {
+        "sample_id": "BASE-0009-E15",
+        "original_id": "BASE-0009",
+        "split": "validation",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0009 Document type: FIR",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0009-E15 Document type: FIR",
+          "+Controlled synthetic variant: E15.",
+          "-SYNTHETIC SIGNATURE / SEAL PLACEHOLDER",
+          "+ALTERED SYNTHETIC SEAL REGION — E15 TEST"
+        ],
+        "pass": false,
+        "reason": "seal change is a printed text swap that spells out the class ('ALTERED SYNTHETIC SEAL REGION - E15 TEST'); no signature or seal image is altered"
+      },
+      {
+        "sample_id": "BASE-0034-E15",
+        "original_id": "BASE-0034",
+        "split": "test",
+        "fields_changed": [],
+        "old": {},
+        "new": {},
+        "text_diff": [
+          "-Sample ID: BASE-0034 Document type: charge_sheet",
+          "-Original synthetic base record.",
+          "+Sample ID: BASE-0034-E15 Document type: charge_sheet",
+          "+Controlled synthetic variant: E15.",
+          "-SYNTHETIC SIGNATURE / SEAL PLACEHOLDER",
+          "+ALTERED SYNTHETIC SEAL REGION — E15 TEST"
+        ],
+        "pass": false,
+        "reason": "seal change is a printed text swap that spells out the class ('ALTERED SYNTHETIC SEAL REGION - E15 TEST'); no signature or seal image is altered"
+      }
+    ]
+  }
+}

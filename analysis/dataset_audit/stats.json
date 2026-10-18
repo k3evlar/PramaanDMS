@@ -1,0 +1,884 @@
+{
+  "generated_at": "2026-10-17T20:10:11+00:00",
+  "dataset": "dataset_v2",
+  "labels_csv_sha256": "a45a5fde1287125804981f0ce58a2212b458e0048e4a4cd7b14f1d6aba846219",
+  "inventory": {
+    "file_count": 3407,
+    "files_by_extension": {
+      ".csv": 5,
+      ".jpg": 1700,
+      ".json": 852,
+      ".pdf": 850
+    },
+    "total_mb": 631.0,
+    "pdf_page_counts": {
+      "1": 850
+    },
+    "label_rows": 2550,
+    "files_without_label_row": 0,
+    "label_rows_without_file": 0,
+    "corrupt_files": 0
+  },
+  "schema": {
+    "violation_count": 4100,
+    "violations_by_rule": {
+      "page_affected_not_integer": 2400,
+      "value_not_allowed:capture_type": 1700
+    },
+    "value_counts": {
+      "severity": {
+        "None": 300,
+        "Major": 2250
+      },
+      "expected_verdict": {
+        "Valid": 300,
+        "Tampered": 2250
+      },
+      "capture_type": {
+        "digital": 850,
+        "print_scan": 850,
+        "phone_photo": 850
+      },
+      "split": {
+        "test": 612,
+        "train": 1734,
+        "validation": 204
+      }
+    },
+    "target_verdict_counts": {
+      "Original (anchor)": 50,
+      "Equivalent": 250,
+      "Materially Altered": 2250
+    },
+    "byte_identical_non_self_pairs": 0
+  },
+  "coverage": {
+    "base_documents": 50,
+    "base_by_type": [
+      {
+        "value": "FIR",
+        "count": 13,
+        "pct": 26.0
+      },
+      {
+        "value": "charge_sheet",
+        "count": 13,
+        "pct": 26.0
+      },
+      {
+        "value": "statement",
+        "count": 12,
+        "pct": 24.0
+      },
+      {
+        "value": "court_order",
+        "count": 12,
+        "pct": 24.0
+      }
+    ],
+    "class_all_rows": [
+      {
+        "value": "E0",
+        "count": 300,
+        "pct": 11.76
+      },
+      {
+        "value": "E1",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E2",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E3",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E4",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E5",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E6",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E7",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E8",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E9",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E10",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E11",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E12",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E13",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E14",
+        "count": 150,
+        "pct": 5.88
+      },
+      {
+        "value": "E15",
+        "count": 150,
+        "pct": 5.88
+      }
+    ],
+    "expected_verdict": [
+      {
+        "value": "Tampered",
+        "count": 2250,
+        "pct": 88.24
+      },
+      {
+        "value": "Valid",
+        "count": 300,
+        "pct": 11.76
+      }
+    ],
+    "severity": [
+      {
+        "value": "Major",
+        "count": 2250,
+        "pct": 88.24
+      },
+      {
+        "value": "None",
+        "count": 300,
+        "pct": 11.76
+      }
+    ],
+    "capture": [
+      {
+        "value": "digital",
+        "count": 850,
+        "pct": 33.33
+      },
+      {
+        "value": "scan",
+        "count": 850,
+        "pct": 33.33
+      },
+      {
+        "value": "photo",
+        "count": 850,
+        "pct": 33.33
+      }
+    ],
+    "class_x_capture": {
+      "E0": {
+        "digital": 100,
+        "scan": 100,
+        "photo": 100
+      },
+      "E1": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E2": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E3": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E4": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E5": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E6": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E7": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E8": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E9": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E10": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E11": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E12": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E13": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E14": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      },
+      "E15": {
+        "digital": 50,
+        "scan": 50,
+        "photo": 50
+      }
+    },
+    "class_by_doc_type": {
+      "FIR": {
+        "E0": 13,
+        "E1": 13,
+        "E2": 13,
+        "E3": 13,
+        "E4": 13,
+        "E5": 13,
+        "E6": 13,
+        "E7": 13,
+        "E8": 13,
+        "E9": 13,
+        "E10": 13,
+        "E11": 13,
+        "E12": 13,
+        "E13": 13,
+        "E14": 13,
+        "E15": 13
+      },
+      "charge_sheet": {
+        "E0": 13,
+        "E1": 13,
+        "E2": 13,
+        "E3": 13,
+        "E4": 13,
+        "E5": 13,
+        "E6": 13,
+        "E7": 13,
+        "E8": 13,
+        "E9": 13,
+        "E10": 13,
+        "E11": 13,
+        "E12": 13,
+        "E13": 13,
+        "E14": 13,
+        "E15": 13
+      },
+      "statement": {
+        "E0": 12,
+        "E1": 12,
+        "E2": 12,
+        "E3": 12,
+        "E4": 12,
+        "E5": 12,
+        "E6": 12,
+        "E7": 12,
+        "E8": 12,
+        "E9": 12,
+        "E10": 12,
+        "E11": 12,
+        "E12": 12,
+        "E13": 12,
+        "E14": 12,
+        "E15": 12
+      },
+      "court_order": {
+        "E0": 12,
+        "E1": 12,
+        "E2": 12,
+        "E3": 12,
+        "E4": 12,
+        "E5": 12,
+        "E6": 12,
+        "E7": 12,
+        "E8": 12,
+        "E9": 12,
+        "E10": 12,
+        "E11": 12,
+        "E12": 12,
+        "E13": 12,
+        "E14": 12,
+        "E15": 12
+      }
+    },
+    "class_by_split": {
+      "train": {
+        "E0": 204,
+        "E1": 102,
+        "E2": 102,
+        "E3": 102,
+        "E4": 102,
+        "E5": 102,
+        "E6": 102,
+        "E7": 102,
+        "E8": 102,
+        "E9": 102,
+        "E10": 102,
+        "E11": 102,
+        "E12": 102,
+        "E13": 102,
+        "E14": 102,
+        "E15": 102
+      },
+      "validation": {
+        "E0": 24,
+        "E1": 12,
+        "E2": 12,
+        "E3": 12,
+        "E4": 12,
+        "E5": 12,
+        "E6": 12,
+        "E7": 12,
+        "E8": 12,
+        "E9": 12,
+        "E10": 12,
+        "E11": 12,
+        "E12": 12,
+        "E13": 12,
+        "E14": 12,
+        "E15": 12
+      },
+      "test": {
+        "E0": 72,
+        "E1": 36,
+        "E2": 36,
+        "E3": 36,
+        "E4": 36,
+        "E5": 36,
+        "E6": 36,
+        "E7": 36,
+        "E8": 36,
+        "E9": 36,
+        "E10": 36,
+        "E11": 36,
+        "E12": 36,
+        "E13": 36,
+        "E14": 36,
+        "E15": 36
+      }
+    },
+    "harmless_share_pct": 11.76
+  },
+  "splits": {
+    "leaking_bases": {},
+    "ratios": {
+      "train": {
+        "bases": 34,
+        "bases_pct": 68.0,
+        "samples": 1734,
+        "samples_pct": 68.0,
+        "target_pct": 70.0
+      },
+      "validation": {
+        "bases": 4,
+        "bases_pct": 8.0,
+        "samples": 204,
+        "samples_pct": 8.0,
+        "target_pct": 15.0
+      },
+      "test": {
+        "bases": 12,
+        "bases_pct": 24.0,
+        "samples": 612,
+        "samples_pct": 24.0,
+        "target_pct": 15.0
+      }
+    },
+    "coverage_gaps_val_test": [],
+    "cross_split_base_pairs_total": 592,
+    "cross_split_pairs_above_threshold": 111,
+    "cross_split_pairs_narrative_above_threshold": 592,
+    "full_text_similarity_all_pairs": {
+      "min": 0.8333,
+      "mean": 0.8819,
+      "max": 0.9393
+    },
+    "narrative_similarity_all_pairs": {
+      "min": 0.9321,
+      "mean": 0.9548,
+      "max": 0.9969
+    },
+    "values_only_similarity_all_pairs": {
+      "min": 0.7323,
+      "mean": 0.8122,
+      "max": 0.906
+    },
+    "distinct_narratives_after_masking_ids": 5,
+    "replacement_values_per_class": {
+      "E1": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E2": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E3": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E4": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E5": {
+        "distinct_new_values": 2,
+        "values_in_all_three_splits": 2
+      },
+      "E6": {
+        "distinct_new_values": 5,
+        "values_in_all_three_splits": 1
+      },
+      "E7": {
+        "distinct_new_values": 15,
+        "values_in_all_three_splits": 6
+      },
+      "E8": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E9": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E10": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E11": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E12": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E13": {
+        "distinct_new_values": 1,
+        "values_in_all_three_splits": 1
+      },
+      "E14": {
+        "distinct_new_values": 2,
+        "values_in_all_three_splits": 2
+      }
+    }
+  },
+  "tamper_correctness": {
+    "E0": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E1": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E2": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E3": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E4": {
+      "checked": 50,
+      "pass": 42,
+      "fail": 8,
+      "verdict": "PARTIAL"
+    },
+    "E5": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E6": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E7": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E8": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E9": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E10": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E11": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL"
+    },
+    "E12": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL"
+    },
+    "E13": {
+      "checked": 50,
+      "pass": 50,
+      "fail": 0,
+      "verdict": "PASS"
+    },
+    "E14": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL"
+    },
+    "E15": {
+      "checked": 50,
+      "pass": 0,
+      "fail": 50,
+      "verdict": "FAIL"
+    },
+    "pairs_with_header_label_leak": 800
+  },
+  "content_quality": {
+    "realism_marker_hits_by_doc_type": {
+      "BNS / BNSS / BSA reference": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "IPC / CrPC reference": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "u/s or 'Section N of <Act>' citation": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "Police Station label": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "District label": {
+        "FIR": 5,
+        "charge_sheet": 3,
+        "statement": 1,
+        "court_order": 3
+      },
+      "Complainant / informant particulars": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "Information received at PS (date/time)": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "Brief facts / statement body heading": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "Officer rank and belt / ID": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      },
+      "Signature of officer / complainant": {
+        "FIR": 0,
+        "charge_sheet": 0,
+        "statement": 0,
+        "court_order": 0
+      }
+    },
+    "act_names_used": {
+      "Sample Evidence Protection Act": 16,
+      "Fictional Public Order Act": 26,
+      "Synthetic Property Safety Act": 8
+    },
+    "all_doc_types_share_one_layout": true,
+    "pii_hits": {},
+    "non_ascii_chars_in_pdf_text": {
+      "U+2014": 900
+    },
+    "pdfs_with_devanagari": 0,
+    "distinct_values_per_field_across_50_bases": {
+      "document_type": 4,
+      "case_number": 50,
+      "fir_number": 50,
+      "court_name": 3,
+      "police_station": 3,
+      "jurisdiction": 5,
+      "filing_date": 50,
+      "document_date": 50,
+      "incident_date": 50,
+      "incident_time": 4,
+      "incident_location": 5,
+      "complainant_name": 15,
+      "accused_name": 14,
+      "victim_name": 15,
+      "witness_name": 14,
+      "investigating_officer": 14,
+      "advocate_name": 15,
+      "act_name": 3,
+      "section_number": 4,
+      "offence_description": 5,
+      "monetary_amount": 5,
+      "evidence_item_id": 50,
+      "evidence_description": 50,
+      "seizure_date": 50,
+      "custody_holder": 50,
+      "case_status": 3,
+      "next_hearing_date": 20
+    },
+    "image_quality": {
+      "scan": {
+        "dpi_a4": {
+          "min": 160.0,
+          "p05": 160.0,
+          "median": 160.0,
+          "max": 160.0
+        },
+        "sharpness": {
+          "min": 1723.75,
+          "p05": 1808.0,
+          "median": 2045.25,
+          "max": 2813.77
+        },
+        "brightness": {
+          "min": 243.69,
+          "p05": 244.0,
+          "median": 244.49,
+          "max": 245.08
+        },
+        "contrast": {
+          "min": 36.06,
+          "p05": 36.51,
+          "median": 38.68,
+          "max": 41.19
+        },
+        "skew_deg": {
+          "min": -1.14,
+          "p05": -0.86,
+          "median": 0.0,
+          "max": 1.0
+        },
+        "count": 850,
+        "abs_skew": {
+          "min": 0.0,
+          "p05": 0.0,
+          "median": 0.2,
+          "max": 1.14
+        }
+      },
+      "photo": {
+        "dpi_a4": {
+          "min": 160.0,
+          "p05": 160.0,
+          "median": 160.0,
+          "max": 160.0
+        },
+        "sharpness": {
+          "min": 1871.44,
+          "p05": 1912.55,
+          "median": 1963.97,
+          "max": 2144.08
+        },
+        "brightness": {
+          "min": 232.74,
+          "p05": 233.05,
+          "median": 233.36,
+          "max": 233.81
+        },
+        "contrast": {
+          "min": 39.73,
+          "p05": 40.07,
+          "median": 40.49,
+          "max": 41.36
+        },
+        "skew_deg": {
+          "min": 1.08,
+          "p05": 1.31,
+          "median": 2.07,
+          "max": 3.05
+        },
+        "count": 850,
+        "abs_skew": {
+          "min": 1.08,
+          "p05": 1.31,
+          "median": 2.07,
+          "max": 3.05
+        }
+      }
+    },
+    "images_flagged_pct": 0.0
+  },
+  "ocr": {
+    "digital": {
+      "n": 16,
+      "cer_mean": 0.0413,
+      "cer_median": 0.0426,
+      "cer_p90": 0.0617,
+      "cer_max": 0.0799,
+      "token_recall_mean": 0.9324,
+      "field_exact_match_mean": 0.963,
+      "tampered_value_read_rate": 0.8667,
+      "tampered_value_n": 15,
+      "label_readable_in_image_rate": 0.9375,
+      "most_missed_fields": [
+        [
+          "offence_description",
+          10
+        ],
+        [
+          "evidence_description",
+          6
+        ]
+      ]
+    },
+    "scan": {
+      "n": 32,
+      "cer_mean": 0.0393,
+      "cer_median": 0.0406,
+      "cer_p90": 0.0836,
+      "cer_max": 0.0872,
+      "token_recall_mean": 0.9343,
+      "field_exact_match_mean": 0.9641,
+      "tampered_value_read_rate": 0.8,
+      "tampered_value_n": 30,
+      "label_readable_in_image_rate": 0.9688,
+      "most_missed_fields": [
+        [
+          "offence_description",
+          15
+        ],
+        [
+          "evidence_description",
+          13
+        ],
+        [
+          "monetary_amount",
+          2
+        ],
+        [
+          "evidence_item_id",
+          1
+        ]
+      ]
+    },
+    "photo": {
+      "n": 32,
+      "cer_mean": 0.155,
+      "cer_median": 0.1154,
+      "cer_p90": 0.3554,
+      "cer_max": 0.478,
+      "token_recall_mean": 0.9288,
+      "field_exact_match_mean": 0.9502,
+      "tampered_value_read_rate": 0.7333,
+      "tampered_value_n": 30,
+      "label_readable_in_image_rate": 0.9375,
+      "most_missed_fields": [
+        [
+          "offence_description",
+          30
+        ],
+        [
+          "evidence_description",
+          11
+        ],
+        [
+          "monetary_amount",
+          2
+        ]
+      ]
+    }
+  }
+}

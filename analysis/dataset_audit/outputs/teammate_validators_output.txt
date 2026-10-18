@@ -1,0 +1,26 @@
+=== PramaanDMS dataset validation ===
+Total rows: 2550
+Unique original/base IDs: 50
+Capture types: {'digital': 850, 'print_scan': 850, 'phone_photo': 850}
+Digital class counts: {'E0': 100, 'E1': 50, 'E10': 50, 'E11': 50, 'E12': 50, 'E13': 50, 'E14': 50, 'E15': 50, 'E2': 50, 'E3': 50, 'E4': 50, 'E5': 50, 'E6': 50, 'E7': 50, 'E8': 50, 'E9': 50}
+Digital samples: 850
+Validation issues: 0
+Warnings: 0
+PASS: file paths, capture labels, class coverage, and structured field-change rules passed.
+exit=0
+=== PramaanDMS final structural audit ===
+Label rows: 2550
+Unique base documents: 50
+Capture counts: {'digital': 850, 'print_scan': 850, 'phone_photo': 850}
+Digital class counts: {'E0': 100, 'E1': 50, 'E10': 50, 'E11': 50, 'E12': 50, 'E13': 50, 'E14': 50, 'E15': 50, 'E2': 50, 'E3': 50, 'E4': 50, 'E5': 50, 'E6': 50, 'E7': 50, 'E8': 50, 'E9': 50}
+Sample rows by split: {'test': 612, 'train': 1734, 'validation': 204}
+Base documents by split: {'test': 12, 'train': 34, 'validation': 4}
+Capture log rows: 1700
+Change log rows: 850
+Manifest base-document counts: {'train': 34, 'validation': 4, 'test': 12}
+Errors: 0
+Warnings: 1
+WARNING: Digital class E0 has 100 rows; expected 50 for 50 bases.
+RESULT: PASS — structural consistency checks passed.
+Human review is still required for semantic correctness, capture legibility, and the required independent 10% review.
+exit=0

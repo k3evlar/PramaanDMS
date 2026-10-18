@@ -1,0 +1,8 @@
+# Dataset generator (ml/data/generator). Pinned to the versions used for FIR-Tamper v0.
+# Licences are listed in docs/LICENCES.md.
+reportlab==5.0.1
+pypdfium2==5.14.0
+opencv-python-headless==5.0.0.93
+numpy==2.5.4
+pillow==12.3.0
+pytest==9.1.1

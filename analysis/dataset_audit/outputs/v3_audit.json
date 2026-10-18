@@ -1,0 +1,316 @@
+{
+  "data": "dataset_v3",
+  "rows": 19680,
+  "versions": 6560,
+  "bases": 230,
+  "files_checked": 26242,
+  "checks": [
+    {
+      "check": "Label rows with a missing file",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Corrupt or unreadable files",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Class code in printed text (digital PDFs)",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Class code in PDF metadata",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Base documents in more than one split",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Class code in any file path",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Version tag in the page footer",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Validation share of seen bases (%)",
+      "value": 15.0,
+      "pass": true
+    },
+    {
+      "check": "Test share of seen bases (%)",
+      "value": 15.0,
+      "pass": true
+    },
+    {
+      "check": "Distinct narratives / bases",
+      "value": "230 / 230",
+      "pass": true
+    },
+    {
+      "check": "Cross-split narrative pairs above 0.9",
+      "value": 0,
+      "pass": true
+    },
+    {
+      "check": "Harmless (E0) share of rows (%)",
+      "value": 31.55,
+      "pass": true
+    },
+    {
+      "check": "Generator classes used in train but missing from another split",
+      "value": {},
+      "pass": true
+    },
+    {
+      "check": "E-classes with no samples",
+      "value": [],
+      "pass": true
+    },
+    {
+      "check": "Smallest per-E-class test count (samples)",
+      "value": "75 (E3)",
+      "pass": true
+    },
+    {
+      "check": "test_unseen sentences whose template is in train (mean share)",
+      "value": 0.0,
+      "pass": true
+    },
+    {
+      "check": "All 5 verdicts in every split",
+      "value": {
+        "train": [],
+        "val": [],
+        "test": [],
+        "test_unseen": []
+      },
+      "pass": true
+    },
+    {
+      "check": "Major and Minor in every split",
+      "value": {
+        "train": [],
+        "val": [],
+        "test": [],
+        "test_unseen": []
+      },
+      "pass": true
+    }
+  ],
+  "known_limitations": [
+    {
+      "item": "test (seen families) sentences whose template is in train (mean share)",
+      "value": 1.0,
+      "plan": "Expected: seen-family test shares templates by design; test_unseen measures generalisation"
+    },
+    {
+      "item": "Captures",
+      "value": "simulated scan_sim and photo_sim, one level",
+      "plan": "Harder and real captures in Phase 10 (Stage 3)"
+    }
+  ],
+  "ratios": {
+    "train": {
+      "bases": 140,
+      "pct": 70.0
+    },
+    "val": {
+      "bases": 30,
+      "pct": 15.0
+    },
+    "test": {
+      "bases": 30,
+      "pct": 15.0
+    },
+    "test_unseen": {
+      "bases": 30,
+      "pct": null
+    }
+  },
+  "template_overlap": {
+    "test": 1.0,
+    "test_unseen": 0.0
+  },
+  "rows_by_split": {
+    "val": 2565,
+    "train": 11994,
+    "test": 2571,
+    "test_unseen": 2550
+  },
+  "rows_by_capture": {
+    "digital": 6560,
+    "scan_sim": 6560,
+    "photo_sim": 6560
+  },
+  "rows_by_doc_type": {
+    "FIR": 8304,
+    "CHARGESHEET": 6675,
+    "STATEMENT": 4701
+  },
+  "bases_by_doc_type": {
+    "FIR": 92,
+    "CHARGESHEET": 69,
+    "STATEMENT": 69
+  },
+  "e_class_by_split": {
+    "train": {
+      "E0": 3780,
+      "E1": 420,
+      "E2": 420,
+      "E3": 351,
+      "E4": 420,
+      "E5": 588,
+      "E6": 357,
+      "E7": 378,
+      "E8": 420,
+      "E9": 588,
+      "E10": 420,
+      "E11": 420,
+      "E12": 366,
+      "E14": 588,
+      "E15": 420,
+      "E16": 420,
+      "E17": 420,
+      "E18": 420,
+      "E19": 420,
+      "E13": 378
+    },
+    "val": {
+      "E0": 810,
+      "E1": 90,
+      "E2": 90,
+      "E3": 63,
+      "E4": 90,
+      "E5": 126,
+      "E6": 78,
+      "E7": 90,
+      "E8": 90,
+      "E9": 126,
+      "E10": 90,
+      "E11": 90,
+      "E14": 126,
+      "E15": 90,
+      "E16": 90,
+      "E17": 90,
+      "E18": 90,
+      "E19": 90,
+      "E12": 75,
+      "E13": 81
+    },
+    "test": {
+      "E0": 810,
+      "E1": 90,
+      "E2": 90,
+      "E3": 75,
+      "E4": 90,
+      "E5": 126,
+      "E8": 90,
+      "E9": 126,
+      "E10": 90,
+      "E11": 90,
+      "E12": 84,
+      "E14": 126,
+      "E15": 90,
+      "E16": 90,
+      "E17": 90,
+      "E18": 90,
+      "E19": 90,
+      "E7": 78,
+      "E6": 75,
+      "E13": 81
+    },
+    "test_unseen": {
+      "E0": 810,
+      "E1": 90,
+      "E2": 90,
+      "E3": 78,
+      "E4": 90,
+      "E5": 126,
+      "E6": 72,
+      "E8": 90,
+      "E9": 126,
+      "E10": 90,
+      "E11": 90,
+      "E12": 81,
+      "E14": 126,
+      "E15": 90,
+      "E16": 90,
+      "E17": 90,
+      "E18": 90,
+      "E19": 90,
+      "E7": 60,
+      "E13": 81
+    }
+  },
+  "verdict_3level_by_split": {
+    "train": {
+      "Identical": 140,
+      "Equivalent": 3640,
+      "Materially Altered": 7932,
+      "Inconclusive": 141,
+      "Not supported": 141
+    },
+    "val": {
+      "Identical": 30,
+      "Equivalent": 780,
+      "Materially Altered": 1695,
+      "Inconclusive": 30,
+      "Not supported": 30
+    },
+    "test": {
+      "Identical": 30,
+      "Equivalent": 780,
+      "Materially Altered": 1701,
+      "Inconclusive": 30,
+      "Not supported": 30
+    },
+    "test_unseen": {
+      "Identical": 30,
+      "Equivalent": 780,
+      "Materially Altered": 1680,
+      "Not supported": 30,
+      "Inconclusive": 30
+    }
+  },
+  "severity_by_split": {
+    "train": {
+      "None": 4062,
+      "Major": 6585,
+      "Minor": 1347
+    },
+    "val": {
+      "None": 870,
+      "Major": 1410,
+      "Minor": 285
+    },
+    "test": {
+      "None": 870,
+      "Major": 1413,
+      "Minor": 288
+    },
+    "test_unseen": {
+      "None": 870,
+      "Major": 1389,
+      "Minor": 291
+    }
+  },
+  "narrative_cross_split_similarity": {
+    "min": 0.2783,
+    "mean": 0.4275,
+    "max": 0.8396,
+    "pairs": 15300
+  },
+  "narrative_mean_words": 154.0,
+  "missing_files": [],
+  "corrupt_files": [],
+  "text_leaks": []
+}

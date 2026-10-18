@@ -1,0 +1,189 @@
+"""Generate docs/ASVS_CHECKLIST.md from the official OWASP ASVS CSV and our status file.
+
+Usage (from the repo root):
+    .venv/Scripts/python tools/asvs_checklist.py            # write the checklist
+    .venv/Scripts/python tools/asvs_checklist.py --check    # fail if the file is out of date
+
+Inputs:
+    docs/asvs/OWASP_ASVS_5.0.0_en.csv  official requirement list (CC BY-SA 4.0, OWASP)
+    docs/asvs/asvs_l2_status.json      our status per section, with per-item overrides
+
+Every in-scope item must resolve to a status. The script stops with an error if the CSV
+hash does not match, an item has no status, a status is unknown, a Planned item has no
+phase, a Not applicable or Accepted gap item has no reason, or a Done item points to a
+document section that does not exist.
+"""
+
+from __future__ import annotations
+
+import argparse
+import csv
+import hashlib
+import json
+import sys
+from collections import Counter
+from dataclasses import dataclass
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+STATUS_FILE = ROOT / "docs" / "asvs" / "asvs_l2_status.json"
+OUTPUT = ROOT / "docs" / "ASVS_CHECKLIST.md"
+STATUSES = ("Done", "Planned", "Not applicable", "Accepted gap")
+VALID_PHASES = {str(n) for n in range(1, 29)} | {"S"}
+
+
+class ChecklistError(Exception):
+    """Raised when the inputs cannot produce a complete, valid checklist."""
+
+
+@dataclass(frozen=True)
+class Item:
+    req_id: str
+    chapter_id: str
+    chapter_name: str
+    section_id: str
+    section_name: str
+    level: str
+    description: str
+    status: str
+    phase: str
+    note: str
+    ref: str
+
+
+def _sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def _heading_exists(ref: str) -> bool:
+    """Evidence for a Done item.
+
+    'docs/REQUIREMENTS.md#4.1' means a document section: the file must have a heading
+    starting with that number. A plain path such as 'app/worker.py' means the control is
+    implemented in that file, which must exist.
+    """
+    path_part, _, anchor = ref.partition("#")
+    target = ROOT / path_part
+    if not path_part or not target.is_file():
+        return False
+    if not anchor:
+        return True
+    for line in target.read_text(encoding="utf-8").splitlines():
+        stripped = line.lstrip("#").strip()
+        if line.startswith("#") and (stripped == anchor or stripped.startswith(anchor + " ")):
+            return True
+    return False
+
+
+def load_items() -> tuple[dict, list[Item]]:
+    config = json.loads(STATUS_FILE.read_text(encoding="utf-8"))
+    csv_path = ROOT / config["source_csv"]
+    if _sha256(csv_path) != config["source_csv_sha256"]:
+        raise ChecklistError(f"{csv_path} does not match the recorded SHA-256; refusing to use it")
+    levels = set(config["levels_in_scope"])
+    sections: dict[str, dict] = config["sections"]
+    overrides: dict[str, dict] = config["items"]
+    items: list[Item] = []
+    seen: set[str] = set()
+    with open(csv_path, encoding="utf-8-sig", newline="") as f:
+        for row in csv.DictReader(f):
+            if row["L"] not in levels:
+                continue
+            rid = row["req_id"]
+            if rid in seen:
+                raise ChecklistError(f"duplicate requirement {rid} in the CSV")
+            seen.add(rid)
+            entry = overrides.get(rid) or sections.get(row["section_id"])
+            if entry is None:
+                raise ChecklistError(f"{rid} has no status (no item override and no section default)")
+            status = entry.get("status", "")
+            if status not in STATUSES:
+                raise ChecklistError(f"{rid}: unknown status {status!r}")
+            phase = str(entry.get("phase", ""))
+            note = entry.get("note", "").strip()
+            ref = entry.get("ref", "")
+            if status in ("Planned", "Done") and phase not in VALID_PHASES:
+                raise ChecklistError(f"{rid}: {status} needs a valid phase, got {phase!r}")
+            if status in ("Not applicable", "Accepted gap") and not note:
+                raise ChecklistError(f"{rid}: {status} needs a reason")
+            if status == "Done" and not _heading_exists(ref):
+                raise ChecklistError(f"{rid}: Done must point to an existing document section, got {ref!r}")
+            items.append(Item(rid, row["chapter_id"], row["chapter_name"], row["section_id"],
+                              row["section_name"], row["L"], " ".join(row["req_description"].split()),
+                              status, phase, note, ref))
+    unknown = sorted(set(overrides) - seen)
+    if unknown:
+        raise ChecklistError(f"status file has items not in scope or not in the CSV: {unknown}")
+    return config, items
+
+
+def _cell(text: str) -> str:
+    return text.replace("|", "\\|")
+
+
+def render(config: dict, items: list[Item]) -> str:
+    by_status = Counter(i.status for i in items)
+    lines = [
+        "# OWASP ASVS Level 2 Checklist",
+        "",
+        "Phase 2 deliverable, generated by `tools/asvs_checklist.py`. Do not edit by hand: change "
+        "`docs/asvs/asvs_l2_status.json` and run the tool again.",
+        "",
+        f"- Standard: OWASP Application Security Verification Standard {config['asvs_version']}, "
+        f"from the official CSV ({config['source_url']}), SHA-256 `{config['source_csv_sha256']}`.",
+        "- Licence of the requirement text: CC BY-SA 4.0, copyright OWASP Foundation. The requirement "
+        "text below is quoted from the standard without change.",
+        f"- Scope: Level 2, which means every Level 1 and Level 2 requirement ({len(items)} items).",
+        f"- Status as of {config['status_date']}. Statuses: Done, Planned (with the phase that builds it), "
+        "Not applicable (with the reason), Accepted gap (with the justification) (D62).",
+        "- \"Done\" in Phase 2 means the documentation requirement is met by the referenced section. "
+        "The controls themselves are built in later phases and tracked by their own items.",
+        "",
+        "## Summary",
+        "",
+        "| Status | Items |",
+        "|---|---|",
+    ]
+    for s in STATUSES:
+        lines.append(f"| {s} | {by_status.get(s, 0)} |")
+    lines.append(f"| **Total** | **{len(items)}** |")
+    lines += ["", "| Chapter | Items | Done | Planned | Not applicable | Accepted gap |", "|---|---|---|---|---|---|"]
+    chapters: dict[str, list[Item]] = {}
+    for i in items:
+        chapters.setdefault(f"{i.chapter_id} {i.chapter_name}", []).append(i)
+    for name, its in chapters.items():
+        c = Counter(i.status for i in its)
+        lines.append(f"| {name} | {len(its)} | {c['Done']} | {c['Planned']} | {c['Not applicable']} | {c['Accepted gap']} |")
+    for name, its in chapters.items():
+        lines += ["", f"## {name}", "", "| ID | L | Requirement | Status | Phase | Note |", "|---|---|---|---|---|---|"]
+        for i in its:
+            note = i.note + (f" See `{i.ref}`." if i.ref else "")
+            lines.append(f"| {i.req_id} | {i.level} | {_cell(i.description)} | {i.status} | {i.phase or '-'} | {_cell(note)} |")
+    return "\n".join(lines) + "\n"
+
+
+def main(argv: list[str] | None = None) -> int:
+    ap = argparse.ArgumentParser(description="Generate the ASVS Level 2 checklist.")
+    ap.add_argument("--check", action="store_true", help="fail if docs/ASVS_CHECKLIST.md is out of date")
+    args = ap.parse_args(argv)
+    try:
+        config, items = load_items()
+    except ChecklistError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 2
+    text = render(config, items)
+    if args.check:
+        current = OUTPUT.read_text(encoding="utf-8") if OUTPUT.exists() else ""
+        if current != text:
+            print("error: docs/ASVS_CHECKLIST.md is out of date; run tools/asvs_checklist.py", file=sys.stderr)
+            return 1
+        print(f"ok: {len(items)} items up to date")
+        return 0
+    OUTPUT.write_text(text, encoding="utf-8")
+    print(f"wrote {OUTPUT.relative_to(ROOT)} with {len(items)} items: "
+          + ", ".join(f"{s} {sum(1 for i in items if i.status == s)}" for s in STATUSES))
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

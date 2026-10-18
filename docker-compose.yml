@@ -1,0 +1,248 @@
+# Pramaan DMS: the whole system with one command.
+#   python tools/setup_env.py      (once: writes .env and docker/secrets/*, all git-ignored)
+#   docker compose up -d --build --wait
+#
+# Eight long-running services, each with a health check:
+#   frontend, api, worker, postgres, seaweedfs, valkey, openbao, clamav
+# plus two short jobs that run and exit: "migrate" (database migrations) and
+# "storage-init" (creates the write-once originals bucket, Phase 5).
+#
+# Security defaults (docs/THREAT_MODEL.md, docs/REQUIREMENTS.md 4.7):
+# - Only the frontend publishes a port, bound to 127.0.0.1 unless PRAMAAN_HTTP_BIND is set.
+# - Back-end services sit on an internal network with no internet access. ClamAV alone also
+#   joins an egress network to download virus signatures.
+# - No default credentials: every secret comes from .env and the stack refuses to start
+#   if one is missing (${VAR:?message}).
+# - Images are pinned to exact tags. App containers run as non-root, read-only, with all
+#   Linux capabilities dropped and no privilege escalation.
+
+name: pramaan
+
+x-app-env: &app-env
+  PRAMAAN_ENV: ${PRAMAAN_ENV:-dev}
+  PRAMAAN_LOG_LEVEL: ${PRAMAAN_LOG_LEVEL:-INFO}
+  PRAMAAN_EXPOSE_API_DOCS: ${PRAMAAN_EXPOSE_API_DOCS:-false}
+  PRAMAAN_DATABASE_URL: postgresql+psycopg://pramaan_app:${PRAMAAN_DB_APP_PASSWORD:?run tools/setup_env.py}@postgres:5432/pramaan
+  PRAMAAN_VALKEY_URL: redis://:${VALKEY_PASSWORD:?run tools/setup_env.py}@valkey:6379/0
+  PRAMAAN_S3_ENDPOINT: http://seaweedfs:8333
+  PRAMAAN_S3_ACCESS_KEY: ${PRAMAAN_S3_APP_ACCESS_KEY:?run tools/setup_env.py}
+  PRAMAAN_S3_SECRET_KEY: ${PRAMAAN_S3_APP_SECRET_KEY:?run tools/setup_env.py}
+  PRAMAAN_OPENBAO_ADDR: http://openbao:8200
+  PRAMAAN_OPENBAO_TOKEN: ${PRAMAAN_OPENBAO_TOKEN:?run tools/setup_env.py}
+  PRAMAAN_CLAMAV_HOST: clamav
+  PRAMAAN_CLAMAV_PORT: "3310"
+  PRAMAAN_S3_BUCKET: ${PRAMAAN_S3_BUCKET:-pramaan-originals}
+  PRAMAAN_RETENTION_DAYS: ${PRAMAAN_RETENTION_DAYS:-3650}
+  # Header identity until Phase 16 login. The app refuses it outside dev and test (D82).
+  PRAMAAN_DEV_IDENTITY: ${PRAMAAN_DEV_IDENTITY:-false}
+
+x-app-hardening: &app-hardening
+  read_only: true
+  tmpfs:
+    - /tmp
+  cap_drop: [ALL]
+  security_opt: ["no-new-privileges:true"]
+  restart: unless-stopped
+
+services:
+  postgres:
+    image: postgres:17.11-alpine3.24
+    environment:
+      POSTGRES_USER: pramaan_admin
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?run tools/setup_env.py}
+      POSTGRES_DB: pramaan
+      PRAMAAN_DB_OWNER_PASSWORD: ${PRAMAAN_DB_OWNER_PASSWORD:?run tools/setup_env.py}
+      PRAMAAN_DB_APP_PASSWORD: ${PRAMAAN_DB_APP_PASSWORD:?run tools/setup_env.py}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d:ro
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U pramaan_admin -d pramaan"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    restart: unless-stopped
+
+  valkey:
+    image: valkey/valkey:8.1.10-alpine3.24
+    # The password is in the generated config file, not on the command line.
+    command: ["valkey-server", "/usr/local/etc/valkey/valkey.conf"]
+    environment:
+      VALKEY_PASSWORD: ${VALKEY_PASSWORD:?run tools/setup_env.py}
+    volumes:
+      - ./docker/secrets/valkey.conf:/usr/local/etc/valkey/valkey.conf:ro
+      - valkeydata:/data
+    networks: [backend]
+    healthcheck:
+      # valkey-cli reads REDISCLI_AUTH, so the password is not in the process list.
+      test: ["CMD-SHELL", "REDISCLI_AUTH=\"$$VALKEY_PASSWORD\" valkey-cli ping | grep -q PONG"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  seaweedfs:
+    image: chrislusf/seaweedfs:4.48
+    # Single-node master, volume, filer and S3 gateway. S3 identities come from the
+    # generated config file. The Object Lock bucket is created by storage-init (D58, D85).
+    command: ["server", "-s3", "-s3.port=8333", "-s3.config=/etc/seaweedfs/s3.json"]
+    volumes:
+      - ./docker/secrets/seaweedfs_s3.json:/etc/seaweedfs/s3.json:ro
+      - seaweeddata:/data
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8333/healthz > /dev/null"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  openbao:
+    image: openbao/openbao:2.7.1
+    # Dev mode for the demo only (in-memory, auto-unsealed). Phase 18 documents the
+    # production path. The root token comes from .env, never from the repo.
+    environment:
+      BAO_DEV_ROOT_TOKEN_ID: ${PRAMAAN_OPENBAO_TOKEN:?run tools/setup_env.py}
+    cap_add: [IPC_LOCK]
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8200/v1/sys/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  clamav:
+    image: clamav/clamav:1.4.6
+    # First start downloads the virus signature database (about 300 MB), which needs
+    # internet and several minutes; the health check allows for that.
+    volumes:
+      - clamdb:/var/lib/clamav
+    networks: [backend, egress]
+    healthcheck:
+      test: ["CMD", "clamdcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10m
+    restart: unless-stopped
+
+  migrate:
+    build:
+      context: .
+      dockerfile: docker/api.Dockerfile
+      args:
+        BUILD_COMMIT: ${PRAMAAN_BUILD_COMMIT:-unknown}
+    image: pramaan-api:dev
+    command: ["alembic", "upgrade", "head"]
+    environment:
+      PRAMAAN_MIGRATION_DATABASE_URL: postgresql+psycopg://pramaan_owner:${PRAMAAN_DB_OWNER_PASSWORD:?run tools/setup_env.py}@postgres:5432/pramaan
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks: [backend]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    restart: "no"
+
+  storage-init:
+    # Creates the originals bucket with versioning and Object Lock (COMPLIANCE), then exits.
+    # Uses the S3 admin identity; the app identity cannot change bucket settings.
+    image: pramaan-api:dev
+    command: ["python", "-m", "app.evidence.storage_init"]
+    environment:
+      PRAMAAN_S3_ENDPOINT: http://seaweedfs:8333
+      PRAMAAN_S3_ADMIN_ACCESS_KEY: ${PRAMAAN_S3_ADMIN_ACCESS_KEY:?run tools/setup_env.py}
+      PRAMAAN_S3_ADMIN_SECRET_KEY: ${PRAMAAN_S3_ADMIN_SECRET_KEY:?run tools/setup_env.py}
+      PRAMAAN_S3_BUCKET: ${PRAMAAN_S3_BUCKET:-pramaan-originals}
+      PRAMAAN_RETENTION_DAYS: ${PRAMAAN_RETENTION_DAYS:-3650}
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      seaweedfs:
+        condition: service_healthy
+    networks: [backend]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    restart: "no"
+
+  api:
+    image: pramaan-api:dev
+    environment: *app-env
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      storage-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+      valkey:
+        condition: service_healthy
+      seaweedfs:
+        condition: service_healthy
+      openbao:
+        condition: service_healthy
+      clamav:
+        condition: service_started
+    networks: [backend, web]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import sys, urllib.request; sys.exit(0 if urllib.request.urlopen('http://127.0.0.1:8000/health/live', timeout=3).status == 200 else 1)"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
+    <<: *app-hardening
+
+  worker:
+    image: pramaan-api:dev
+    command: ["celery", "-A", "app.worker.celery_app", "worker", "--loglevel=INFO", "--concurrency=2", "--without-gossip", "--without-mingle"]
+    environment: *app-env
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+      valkey:
+        condition: service_healthy
+    networks: [backend]
+    healthcheck:
+      test: ["CMD-SHELL", "celery -A app.worker.celery_app inspect ping --timeout 5 -d celery@$$HOSTNAME"]
+      interval: 30s
+      timeout: 15s
+      retries: 5
+      start_period: 30s
+    <<: *app-hardening
+
+  frontend:
+    build:
+      context: ./frontend
+    image: pramaan-frontend:dev
+    ports:
+      - "${PRAMAAN_HTTP_BIND:-127.0.0.1}:${PRAMAAN_HTTP_PORT:-8080}:8080"
+    depends_on:
+      api:
+        condition: service_healthy
+    networks: [web]
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1:8080/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    <<: *app-hardening
+
+networks:
+  backend:
+    internal: true
+  web: {}
+  egress: {}
+
+volumes:
+  pgdata: {}
+  valkeydata: {}
+  seaweeddata: {}
+  clamdb: {}

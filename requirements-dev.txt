@@ -1,0 +1,6 @@
+# Development, test and CI tools, pinned. Includes the runtime set and the dataset generator set.
+-r requirements.txt
+-r ml/requirements-data.txt
+PyYAML==6.0.3
+bandit==1.9.4
+pip-audit==2.10.1

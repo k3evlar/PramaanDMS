@@ -1,0 +1,79 @@
+== e_class
+{
+ "rows": 19680,
+ "e_class": {
+  "E0": 6210,
+  "E1": 690,
+  "E2": 690,
+  "E3": 567,
+  "E4": 690,
+  "E5": 966,
+  "E6": 582,
+  "E7": 606,
+  "E8": 690,
+  "E9": 966,
+  "E10": 690,
+  "E11": 690,
+  "E12": 606,
+  "E13": 621,
+  "E14": 966,
+  "E15": 690,
+  "E16": 690,
+  "E17": 690,
+  "E18": 690,
+  "E19": 690
+ },
+ "verdict_3level": {
+  "Identical": 230,
+  "Equivalent": 5980,
+  "Materially Altered": 13008,
+  "Inconclusive": 231,
+  "Not supported": 231
+ }
+}
+exit=0
+== validator
+# Label validation report
+
+Result: **PASS** (0 errors, 0 warnings)
+
+- base documents per split: train 140, val 30, test 30, test_unseen 30
+- split hashes matching manifest: 4 of 4
+- samples: 19680
+- verdicts: Equivalent 5980, Identical 230, Inconclusive 231, Not supported 231, Tampered 13008
+- untouched or format-only: 6210 (31.6%)
+
+wrote 1968 rows for human re-check to C:\ANSH\Work\Projects\Pramaan\analysis\dataset_v3_build\recheck_10pct.csv
+exit=0
+== check
+# FIR-Tamper v0: QA report
+
+Seed: 20261018. Versions: 6560. Samples: 19680.
+Overall automated result: PASS
+
+
+## 1. Labels agree with class declarations
+failures: decl=0 text=0 pii=0 leaks=0 missing=[]
+exit=0
+== audit
+PASS | Label rows with a missing file | 0
+PASS | Corrupt or unreadable files | 0
+PASS | Class code in printed text (digital PDFs) | 0
+PASS | Class code in PDF metadata | 0
+PASS | Base documents in more than one split | 0
+PASS | Class code in any file path | 0
+PASS | Version tag in the page footer | 0
+PASS | Validation share of seen bases (%) | 15.0
+PASS | Test share of seen bases (%) | 15.0
+PASS | Distinct narratives / bases | 230 / 230
+PASS | Cross-split narrative pairs above 0.9 | 0
+PASS | Harmless (E0) share of rows (%) | 31.55
+PASS | Generator classes used in train but missing from another split | {}
+PASS | E-classes with no samples | []
+PASS | Smallest per-E-class test count (samples) | 75 (E3)
+PASS | test_unseen sentences whose template is in train (mean share) | 0.0
+PASS | All 5 verdicts in every split | {'train': [], 'val': [], 'test': [], 'test_unseen': []}
+PASS | Major and Minor in every split | {'train': [], 'val': [], 'test': [], 'test_unseen': []}
+NOTE | test (seen families) sentences whose template is in train (mean share) | 1.0 | Expected: seen-family test shares templates by design; test_unseen measures generalisation
+NOTE | Captures | simulated scan_sim and photo_sim, one level | Harder and real captures in Phase 10 (Stage 3)
+exit=0

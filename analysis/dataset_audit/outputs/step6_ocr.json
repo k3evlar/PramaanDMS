@@ -1,0 +1,1125 @@
+{
+  "engine": "RapidOCR (PP-OCR ONNX), default settings",
+  "ground_truth": "PDF text layer of the source digital sample, whitespace collapsed, dashes folded",
+  "sample_design": "2 random images per class per capture type (seed 20261018), plus 1 digital render per class at 160 dpi as a baseline",
+  "seconds": 1366.3,
+  "summary": {
+    "digital": {
+      "n": 16,
+      "cer_mean": 0.0413,
+      "cer_median": 0.0426,
+      "cer_p90": 0.0617,
+      "cer_max": 0.0799,
+      "token_recall_mean": 0.9324,
+      "field_exact_match_mean": 0.963,
+      "tampered_value_read_rate": 0.8667,
+      "tampered_value_n": 15,
+      "label_readable_in_image_rate": 0.9375,
+      "most_missed_fields": [
+        [
+          "offence_description",
+          10
+        ],
+        [
+          "evidence_description",
+          6
+        ]
+      ]
+    },
+    "scan": {
+      "n": 32,
+      "cer_mean": 0.0393,
+      "cer_median": 0.0406,
+      "cer_p90": 0.0836,
+      "cer_max": 0.0872,
+      "token_recall_mean": 0.9343,
+      "field_exact_match_mean": 0.9641,
+      "tampered_value_read_rate": 0.8,
+      "tampered_value_n": 30,
+      "label_readable_in_image_rate": 0.9688,
+      "most_missed_fields": [
+        [
+          "offence_description",
+          15
+        ],
+        [
+          "evidence_description",
+          13
+        ],
+        [
+          "monetary_amount",
+          2
+        ],
+        [
+          "evidence_item_id",
+          1
+        ]
+      ]
+    },
+    "photo": {
+      "n": 32,
+      "cer_mean": 0.155,
+      "cer_median": 0.1154,
+      "cer_p90": 0.3554,
+      "cer_max": 0.478,
+      "token_recall_mean": 0.9288,
+      "field_exact_match_mean": 0.9502,
+      "tampered_value_read_rate": 0.7333,
+      "tampered_value_n": 30,
+      "label_readable_in_image_rate": 0.9375,
+      "most_missed_fields": [
+        [
+          "offence_description",
+          30
+        ],
+        [
+          "evidence_description",
+          11
+        ],
+        [
+          "monetary_amount",
+          2
+        ]
+      ]
+    }
+  },
+  "per_sample": [
+    {
+      "sample_id": "BASE-0013-E0-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E0",
+      "cer": 0.0403,
+      "token_recall": 0.9359,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": null,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0022-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E0",
+      "cer": 0.0819,
+      "token_recall": 0.8654,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": null,
+      "label_readable_in_image": false
+    },
+    {
+      "sample_id": "BASE-0050-E1-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E1",
+      "cer": 0.0408,
+      "token_recall": 0.9355,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0005-E1-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E1",
+      "cer": 0.0443,
+      "token_recall": 0.9295,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0030-E2-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E2",
+      "cer": 0.0839,
+      "token_recall": 0.8654,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0033-E2-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E2",
+      "cer": 0.0394,
+      "token_recall": 0.9375,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0035-E3-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E3",
+      "cer": 0.035,
+      "token_recall": 0.9226,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0008-E3-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E3",
+      "cer": 0.0872,
+      "token_recall": 0.859,
+      "field_exact_match_rate": 0.8889,
+      "fields_missed": [
+        "offence_description",
+        "evidence_item_id",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0015-E4-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E4",
+      "cer": 0.0517,
+      "token_recall": 0.9038,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "monetary_amount"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0004-E4-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E4",
+      "cer": 0.0066,
+      "token_recall": 0.9744,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "monetary_amount"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0040-E5-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E5",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0018-E5-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E5",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0017-E6-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E6",
+      "cer": 0.0863,
+      "token_recall": 0.8654,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0037-E6-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E6",
+      "cer": 0.0833,
+      "token_recall": 0.8562,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0012-E7-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E7",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0047-E7-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E7",
+      "cer": 0.0836,
+      "token_recall": 0.8718,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0035-E8-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E8",
+      "cer": 0.0424,
+      "token_recall": 0.9226,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0033-E8-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E8",
+      "cer": 0.0409,
+      "token_recall": 0.925,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0004-E9-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E9",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0016-E9-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E9",
+      "cer": 0.0818,
+      "token_recall": 0.8654,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0009-E10-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E10",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0041-E10-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E10",
+      "cer": 0.0374,
+      "token_recall": 0.9398,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0008-E11-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E11",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0005-E11-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E11",
+      "cer": 0.0443,
+      "token_recall": 0.9286,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0038-E12-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E12",
+      "cer": 0.0353,
+      "token_recall": 0.936,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0015-E12-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E12",
+      "cer": 0.0387,
+      "token_recall": 0.9405,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0039-E13-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E13",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0049-E13-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E13",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0014-E14-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E14",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0036-E14-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E14",
+      "cer": 0.0438,
+      "token_recall": 0.929,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0033-E15-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E15",
+      "cer": 0.0829,
+      "token_recall": 0.858,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0005-E15-PRINT_SCAN",
+      "capture": "scan",
+      "class": "E15",
+      "cer": 0.0451,
+      "token_recall": 0.9304,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0048-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E0",
+      "cer": 0.0595,
+      "token_recall": 0.9935,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": null,
+      "label_readable_in_image": false
+    },
+    {
+      "sample_id": "BASE-0007-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E0",
+      "cer": 0.3463,
+      "token_recall": 0.871,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": null,
+      "label_readable_in_image": false
+    },
+    {
+      "sample_id": "BASE-0044-E1-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E1",
+      "cer": 0.0234,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0032-E1-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E1",
+      "cer": 0.465,
+      "token_recall": 0.8718,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0001-E2-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E2",
+      "cer": 0.0904,
+      "token_recall": 0.8526,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0005-E2-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E2",
+      "cer": 0.0237,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0036-E3-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E3",
+      "cer": 0.0603,
+      "token_recall": 0.9871,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0007-E3-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E3",
+      "cer": 0.3955,
+      "token_recall": 0.9355,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0045-E4-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E4",
+      "cer": 0.1499,
+      "token_recall": 0.9167,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "monetary_amount"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0011-E4-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E4",
+      "cer": 0.137,
+      "token_recall": 0.7871,
+      "field_exact_match_rate": 0.8889,
+      "fields_missed": [
+        "offence_description",
+        "monetary_amount",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0006-E5-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E5",
+      "cer": 0.0671,
+      "token_recall": 0.9295,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0041-E5-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E5",
+      "cer": 0.1007,
+      "token_recall": 0.9167,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0038-E6-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E6",
+      "cer": 0.0788,
+      "token_recall": 0.8696,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0003-E6-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E6",
+      "cer": 0.0647,
+      "token_recall": 0.9299,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0037-E7-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E7",
+      "cer": 0.2903,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0003-E7-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E7",
+      "cer": 0.1091,
+      "token_recall": 0.8654,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0022-E8-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E8",
+      "cer": 0.478,
+      "token_recall": 0.9231,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0036-E8-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E8",
+      "cer": 0.0899,
+      "token_recall": 0.8387,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0046-E9-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E9",
+      "cer": 0.1901,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0008-E9-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E9",
+      "cer": 0.2476,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0019-E10-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E10",
+      "cer": 0.315,
+      "token_recall": 0.8121,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0007-E10-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E10",
+      "cer": 0.1284,
+      "token_recall": 0.8061,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0037-E11-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E11",
+      "cer": 0.1627,
+      "token_recall": 0.9363,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0004-E11-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E11",
+      "cer": 0.1218,
+      "token_recall": 0.9304,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0006-E12-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E12",
+      "cer": 0.141,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0046-E12-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E12",
+      "cer": 0.3564,
+      "token_recall": 0.881,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0050-E13-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E13",
+      "cer": 0.0351,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0030-E13-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E13",
+      "cer": 0.0233,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0034-E14-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E14",
+      "cer": 0.0,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0015-E14-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E14",
+      "cer": 0.0768,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0048-E15-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E15",
+      "cer": 0.0007,
+      "token_recall": 0.9936,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0031-E15-PHONE_PHOTO",
+      "capture": "photo",
+      "class": "E15",
+      "cer": 0.1329,
+      "token_recall": 0.8726,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0032",
+      "capture": "digital",
+      "class": "E0",
+      "cer": 0.043,
+      "token_recall": 0.9295,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": null,
+      "label_readable_in_image": false
+    },
+    {
+      "sample_id": "BASE-0033-E1",
+      "capture": "digital",
+      "class": "E1",
+      "cer": 0.0014,
+      "token_recall": 1.0,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0028-E2",
+      "capture": "digital",
+      "class": "E2",
+      "cer": 0.0448,
+      "token_recall": 0.9313,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0034-E3",
+      "capture": "digital",
+      "class": "E3",
+      "cer": 0.0371,
+      "token_recall": 0.9359,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0013-E4",
+      "capture": "digital",
+      "class": "E4",
+      "cer": 0.0432,
+      "token_recall": 0.9295,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0002-E5",
+      "capture": "digital",
+      "class": "E5",
+      "cer": 0.0404,
+      "token_recall": 0.9355,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0048-E6",
+      "capture": "digital",
+      "class": "E6",
+      "cer": 0.0007,
+      "token_recall": 0.9936,
+      "field_exact_match_rate": 1.0,
+      "fields_missed": [],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0046-E7",
+      "capture": "digital",
+      "class": "E7",
+      "cer": 0.0372,
+      "token_recall": 0.9359,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0032-E8",
+      "capture": "digital",
+      "class": "E8",
+      "cer": 0.0427,
+      "token_recall": 0.9295,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0037-E9",
+      "capture": "digital",
+      "class": "E9",
+      "cer": 0.0425,
+      "token_recall": 0.9308,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0044-E10",
+      "capture": "digital",
+      "class": "E10",
+      "cer": 0.0799,
+      "token_recall": 0.8675,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0013-E11",
+      "capture": "digital",
+      "class": "E11",
+      "cer": 0.0439,
+      "token_recall": 0.9286,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0013-E12",
+      "capture": "digital",
+      "class": "E12",
+      "cer": 0.0787,
+      "token_recall": 0.875,
+      "field_exact_match_rate": 0.9259,
+      "fields_missed": [
+        "offence_description",
+        "evidence_description"
+      ],
+      "tampered_value_read": false,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0047-E13",
+      "capture": "digital",
+      "class": "E13",
+      "cer": 0.0425,
+      "token_recall": 0.9295,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0002-E14",
+      "capture": "digital",
+      "class": "E14",
+      "cer": 0.039,
+      "token_recall": 0.9355,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "evidence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    },
+    {
+      "sample_id": "BASE-0009-E15",
+      "capture": "digital",
+      "class": "E15",
+      "cer": 0.0431,
+      "token_recall": 0.9304,
+      "field_exact_match_rate": 0.963,
+      "fields_missed": [
+        "offence_description"
+      ],
+      "tampered_value_read": true,
+      "label_readable_in_image": true
+    }
+  ]
+}

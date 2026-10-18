@@ -1,0 +1,144 @@
+[32m[INFO] 2026-10-18 12:05:03,660 [RapidOCR] base.py:23: Using engine_name: onnxruntime[0m
+[32m[INFO] 2026-10-18 12:05:03,769 [RapidOCR] download_file.py:60: File exists and is valid: C:\ANSH\Work\Projects\Pramaan\analysis\dataset_audit\.venv\Lib\site-packages\rapidocr\models\PP-OCRv6_det_small.onnx[0m
+[32m[INFO] 2026-10-18 12:05:03,770 [RapidOCR] main.py:63: Using C:\ANSH\Work\Projects\Pramaan\analysis\dataset_audit\.venv\Lib\site-packages\rapidocr\models\PP-OCRv6_det_small.onnx[0m
+[32m[INFO] 2026-10-18 12:05:19,390 [RapidOCR] base.py:23: Using engine_name: onnxruntime[0m
+[32m[INFO] 2026-10-18 12:05:19,410 [RapidOCR] download_file.py:60: File exists and is valid: C:\ANSH\Work\Projects\Pramaan\analysis\dataset_audit\.venv\Lib\site-packages\rapidocr\models\ch_ppocr_mobile_v2.0_cls_mobile.onnx[0m
+[32m[INFO] 2026-10-18 12:05:19,411 [RapidOCR] main.py:63: Using C:\ANSH\Work\Projects\Pramaan\analysis\dataset_audit\.venv\Lib\site-packages\rapidocr\models\ch_ppocr_mobile_v2.0_cls_mobile.onnx[0m
+[32m[INFO] 2026-10-18 12:05:21,325 [RapidOCR] base.py:23: Using engine_name: onnxruntime[0m
+[32m[INFO] 2026-10-18 12:05:21,667 [RapidOCR] download_file.py:60: File exists and is valid: C:\ANSH\Work\Projects\Pramaan\analysis\dataset_audit\.venv\Lib\site-packages\rapidocr\models\PP-OCRv6_rec_small.onnx[0m
+[32m[INFO] 2026-10-18 12:05:21,668 [RapidOCR] main.py:63: Using C:\ANSH\Work\Projects\Pramaan\analysis\dataset_audit\.venv\Lib\site-packages\rapidocr\models\PP-OCRv6_rec_small.onnx[0m
+1/112 digital edit E14 2/2 (55s)
+2/112 digital edit E4 1/1 (86s)
+3/112 digital edit E14 3/3 (130s)
+4/112 digital edit E14 3/3 (174s)
+5/112 digital edit E1 1/1 (197s)
+6/112 digital edit E4 1/1 (217s)
+7/112 digital edit E7 2/2 (244s)
+8/112 digital edit E14 3/3 (289s)
+9/112 digital edit E5 1/1 (315s)
+10/112 digital edit E14 8/8 (352s)
+11/112 digital edit E5 1/1 (375s)
+12/112 digital edit E14 9/9 (424s)
+13/112 digital edit E7 4/4 (471s)
+14/112 digital edit E5 1/1 (495s)
+15/112 digital edit E4 1/1 (517s)
+16/112 digital e0 E0 5/5 (539s)
+17/112 digital e0 E0 5/5 (560s)
+18/112 digital e0 E0 6/6 (586s)
+19/112 digital e0 E0 6/6 (610s)
+20/112 digital e0 E0 5/5 (630s)
+21/112 digital e0 E0 5/5 (655s)
+22/112 digital e0 E0 5/5 (678s)
+23/112 scan_sim edit E5 1/1 (703s)
+24/112 scan_sim edit E4 1/1 (726s)
+25/112 scan_sim edit E9 1/1 (750s)
+26/112 scan_sim edit E7 4/4 (796s)
+27/112 scan_sim edit E9 1/1 (818s)
+28/112 scan_sim edit E5 1/1 (840s)
+29/112 scan_sim edit E4 1/1 (863s)
+30/112 scan_sim edit E3 1/1 (885s)
+31/112 scan_sim edit E9 1/1 (909s)
+32/112 scan_sim edit E2 1/1 (930s)
+33/112 scan_sim edit E9 1/1 (953s)
+34/112 scan_sim edit E9 1/1 (974s)
+35/112 scan_sim edit E14 3/3 (1017s)
+36/112 scan_sim edit E7 4/4 (1059s)
+37/112 scan_sim edit E14 3/3 (1108s)
+38/112 scan_sim edit E14 8/8 (1149s)
+39/112 scan_sim edit E5 1/1 (1173s)
+40/112 scan_sim edit E2 1/1 (1195s)
+41/112 scan_sim edit E4 1/1 (1216s)
+42/112 scan_sim edit E3 1/1 (1234s)
+43/112 scan_sim edit E9 1/1 (1256s)
+44/112 scan_sim edit E5 1/1 (1278s)
+45/112 scan_sim edit E1 1/1 (1299s)
+46/112 scan_sim edit E8 1/1 (1321s)
+47/112 scan_sim edit E5 1/1 (1343s)
+48/112 scan_sim edit E1 1/1 (1365s)
+49/112 scan_sim edit E3 1/1 (1387s)
+50/112 scan_sim edit E9 1/1 (1410s)
+51/112 scan_sim edit E4 1/1 (1428s)
+52/112 scan_sim edit E14 2/2 (1472s)
+53/112 scan_sim e0 E0 5/5 (1495s)
+54/112 scan_sim e0 E0 5/5 (1518s)
+55/112 scan_sim e0 E0 5/5 (1537s)
+56/112 scan_sim e0 E0 5/5 (1555s)
+57/112 scan_sim e0 E0 5/5 (1578s)
+58/112 scan_sim e0 E0 6/6 (1600s)
+59/112 scan_sim e0 E0 5/5 (1621s)
+60/112 scan_sim e0 E0 5/5 (1642s)
+61/112 scan_sim e0 E0 6/6 (1663s)
+62/112 scan_sim e0 E0 5/5 (1684s)
+63/112 scan_sim e0 E0 6/6 (1706s)
+64/112 scan_sim e0 E0 5/5 (1726s)
+65/112 scan_sim e0 E0 5/5 (1745s)
+66/112 scan_sim e0 E0 6/6 (1770s)
+67/112 scan_sim e0 E0 5/5 (1788s)
+68/112 photo_sim edit E3 1/1 (1809s)
+69/112 photo_sim edit E14 10/10 (1853s)
+70/112 photo_sim edit E9 1/1 (1876s)
+71/112 photo_sim edit E3 1/1 (1898s)
+72/112 photo_sim edit E8 1/1 (1918s)
+73/112 photo_sim edit E2 1/1 (1938s)
+74/112 photo_sim edit E4 1/1 (1960s)
+75/112 photo_sim edit E9 1/1 (1982s)
+76/112 photo_sim edit E9 1/1 (2004s)
+77/112 photo_sim edit E2 1/1 (2029s)
+78/112 photo_sim edit E14 2/2 (2076s)
+79/112 photo_sim edit E5 1/1 (2098s)
+80/112 photo_sim edit E9 1/1 (2120s)
+81/112 photo_sim edit E7 2/2 (2168s)
+82/112 photo_sim edit E14 3/3 (2212s)
+83/112 photo_sim edit E8 1/1 (2233s)
+84/112 photo_sim edit E5 1/1 (2255s)
+85/112 photo_sim edit E3 1/1 (2278s)
+86/112 photo_sim edit E9 1/1 (2300s)
+87/112 photo_sim edit E9 1/1 (2322s)
+88/112 photo_sim edit E14 3/3 (2373s)
+89/112 photo_sim edit E4 1/1 (2398s)
+90/112 photo_sim edit E13 1/1 (2420s)
+91/112 photo_sim edit E8 1/1 (2441s)
+92/112 photo_sim edit E14 9/9 (2492s)
+93/112 photo_sim edit E14 9/9 (2538s)
+94/112 photo_sim edit E9 1/1 (2560s)
+95/112 photo_sim edit E1 1/1 (2584s)
+96/112 photo_sim edit E2 1/1 (2606s)
+97/112 photo_sim edit E8 1/1 (2625s)
+98/112 photo_sim e0 E0 6/6 (2650s)
+99/112 photo_sim e0 E0 5/5 (2672s)
+100/112 photo_sim e0 E0 5/5 (2694s)
+101/112 photo_sim e0 E0 5/5 (2716s)
+102/112 photo_sim e0 E0 5/5 (2737s)
+103/112 photo_sim e0 E0 6/6 (2759s)
+104/112 photo_sim e0 E0 5/5 (2779s)
+105/112 photo_sim e0 E0 5/5 (2797s)
+106/112 photo_sim e0 E0 5/5 (2815s)
+107/112 photo_sim e0 E0 5/5 (2833s)
+108/112 photo_sim e0 E0 5/5 (2849s)
+109/112 photo_sim e0 E0 5/5 (2868s)
+110/112 photo_sim e0 E0 6/6 (2885s)
+111/112 photo_sim e0 E0 6/6 (2903s)
+112/112 photo_sim e0 E0 5/5 (2917s)
+{
+ "digital": {
+  "edit_samples": 15,
+  "edit_value_readable_rate": 1.0,
+  "e0_samples": 7,
+  "e0_field_read_rate": 1.0,
+  "e0_all_fields_read_rate": 1.0
+ },
+ "scan_sim": {
+  "edit_samples": 30,
+  "edit_value_readable_rate": 1.0,
+  "e0_samples": 15,
+  "e0_field_read_rate": 1.0,
+  "e0_all_fields_read_rate": 1.0
+ },
+ "photo_sim": {
+  "edit_samples": 30,
+  "edit_value_readable_rate": 1.0,
+  "e0_samples": 15,
+  "e0_field_read_rate": 1.0,
+  "e0_all_fields_read_rate": 1.0
+ }
+}

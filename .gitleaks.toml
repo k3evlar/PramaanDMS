@@ -1,0 +1,29 @@
+# gitleaks configuration: default rules, plus paths that are git-ignored and hold
+# generated local secrets or third-party files (never committed).
+title = "Pramaan DMS gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Git-ignored local files, and values that are only environment variable references"
+# 1. A match containing $$VAR or ${VAR} refers to a variable from .env; it is not a secret
+#    (for example the Valkey health check in docker-compose.yml).
+# 2. The generic "api key" rule fires on the image name "valkey:<version>" because
+#    "valkey" contains the word "key". Only that exact image reference is allowed.
+regexTarget = "match"
+regexes = [
+  '''\$\$[A-Z0-9_]+|\$\{[A-Z0-9_]+''',
+  '''^valkey:\d+\.\d+\.\d+-alpine\d+\.\d+\s*$''',
+]
+paths = [
+  '''^\.env$''',
+  '''(^|/)docker/secrets/''',
+  '''(^|/)\.venv/''',
+  '''(^|/)\.tools/''',
+  '''(^|/)node_modules/''',
+  '''(^|/)frontend/dist/''',
+  '''(^|/)dataset/''',
+  '''(^|/)\.pytest_cache/''',
+  '''(^|/)__pycache__/''',
+]

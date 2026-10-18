@@ -1,0 +1,785 @@
+{
+  "asvs_version": "5.0.0",
+  "source_csv": "docs/asvs/OWASP_ASVS_5.0.0_en.csv",
+  "source_csv_sha256": "6124dba176dc563f66363a11ae0c47f9b86b8a4a84c66a793670bd196ed86cd5",
+  "source_url": "https://github.com/OWASP/ASVS/releases/download/v5.0.0_release/OWASP_Application_Security_Verification_Standard_5.0.0_en.csv",
+  "levels_in_scope": [
+    "1",
+    "2"
+  ],
+  "status_date": "2026-10-16",
+  "sections": {
+    "V1.1": {
+      "status": "Planned",
+      "phase": "5",
+      "note": "Input is decoded once at the API boundary by FastAPI and Pydantic; output is encoded by React and by template autoescaping."
+    },
+    "V1.2": {
+      "status": "Planned",
+      "phase": "5",
+      "note": "ORM with bound parameters; no string-built queries."
+    },
+    "V1.3": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Sanitization of data passed to dangerous contexts."
+    },
+    "V1.4": {
+      "status": "Not applicable",
+      "note": "Application code is Python and TypeScript, which manage memory. Native parsers (PDFium, OpenCV, ZBar) are kept patched (V15) and run in the sandboxed worker (threat T26)."
+    },
+    "V1.5": {
+      "status": "Planned",
+      "phase": "3",
+      "note": "No unsafe deserialization: Celery uses JSON only (D60), models load from safetensors only (T42)."
+    },
+    "V2.1": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.1",
+      "note": "Validation rules, consistency rules and business limits are documented in REQUIREMENTS.md sections 4.1 to 4.3."
+    },
+    "V2.2": {
+      "status": "Planned",
+      "phase": "5",
+      "note": "Server-side validation with Pydantic models against the rules in REQUIREMENTS.md 4.1."
+    },
+    "V2.3": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "Business logic flows (approvals, issue, archive) enforced server-side."
+    },
+    "V2.4": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Rate limits and queue limits from REQUIREMENTS.md 4.3."
+    },
+    "V3.2": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "React renders text safely; downloads use Content-Disposition attachment and nosniff."
+    },
+    "V3.3": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Session cookie uses the __Host- prefix, Secure, HttpOnly and SameSite=Strict."
+    },
+    "V3.4": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Security headers set by nginx and the API."
+    },
+    "V3.5": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "CSRF token plus Origin check on state-changing requests."
+    },
+    "V3.7": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "Modern supported browser technology only; no redirects to other domains."
+    },
+    "V4.1": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Correct Content-Type with charset; HTTPS redirect only for browser pages; proxy headers set by nginx only."
+    },
+    "V4.2": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "nginx and Uvicorn configured to reject ambiguous message framing."
+    },
+    "V4.3": {
+      "status": "Not applicable",
+      "note": "No GraphQL API."
+    },
+    "V4.4": {
+      "status": "Not applicable",
+      "note": "No WebSocket. Job status is polled over HTTPS."
+    },
+    "V5.1": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.4",
+      "note": "Permitted types, extensions, sizes and safety handling documented in REQUIREMENTS.md 4.4."
+    },
+    "V5.2": {
+      "status": "Planned",
+      "phase": "5",
+      "note": "Size limits and magic-byte type checks at upload."
+    },
+    "V5.3": {
+      "status": "Planned",
+      "phase": "5",
+      "note": "Files stored under server-generated names in object storage, never in a web-served folder."
+    },
+    "V5.4": {
+      "status": "Planned",
+      "phase": "21",
+      "note": "Downloads served with a server-chosen, encoded file name."
+    },
+    "V6.1": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.5",
+      "note": "Brute-force defences, context-specific words and the single authentication pathway documented in REQUIREMENTS.md 4.5."
+    },
+    "V6.2": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Password rules per REQUIREMENTS.md 4.1 and 4.5."
+    },
+    "V6.3": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Password plus TOTP for all staff."
+    },
+    "V6.4": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Random initial passwords; no hints; reset and lost-TOTP recovery need a Supervisor's second approval and TOTP re-enrolment."
+    },
+    "V6.5": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "TOTP with single use, defined lifetime, CSPRNG seeds; backup codes hashed with Argon2id."
+    },
+    "V6.6": {
+      "status": "Not applicable",
+      "note": "No out-of-band (SMS, e-mail or push) authentication. TOTP only."
+    },
+    "V6.8": {
+      "status": "Not applicable",
+      "note": "No external identity provider."
+    },
+    "V7.1": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.6",
+      "note": "Timeouts and concurrent session limit documented in REQUIREMENTS.md 4.6."
+    },
+    "V7.2": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Server-side reference session tokens from a CSPRNG, at least 128 bits, renewed at login."
+    },
+    "V7.3": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "15-minute idle and 8-hour absolute timeouts (REQUIREMENTS.md 4.6)."
+    },
+    "V7.4": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Logout ends the server session; disabled users lose all sessions."
+    },
+    "V7.5": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Re-authentication for sensitive account changes; users can view and end their sessions."
+    },
+    "V7.6": {
+      "status": "Not applicable",
+      "note": "No federated login."
+    },
+    "V8.1": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "Function, data and field level rules in ACCESS_MATRIX.md (Phase 17). The role summary is already in REQUIREMENTS.md section 1."
+    },
+    "V8.2": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "Role and case membership checked in one dependency on every route."
+    },
+    "V8.3": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "All authorization enforced in the API, never in the UI."
+    },
+    "V8.4": {
+      "status": "Not applicable",
+      "note": "Single organisation; not multi-tenant (SCOPE.md)."
+    },
+    "V9.1": {
+      "status": "Planned",
+      "phase": "23",
+      "note": "Sessions do not use self-contained tokens. The QR-sealed copy payload is a self-contained signed token: Ed25519 only, verified with a pinned key."
+    },
+    "V9.2": {
+      "status": "Planned",
+      "phase": "23",
+      "note": "The QR payload carries a fixed type and is accepted only by the verify service."
+    },
+    "V10.1": {
+      "status": "Not applicable",
+      "note": "No OAuth or OpenID Connect."
+    },
+    "V10.2": {
+      "status": "Not applicable",
+      "note": "No OAuth or OpenID Connect."
+    },
+    "V10.3": {
+      "status": "Not applicable",
+      "note": "No OAuth or OpenID Connect."
+    },
+    "V10.4": {
+      "status": "Not applicable",
+      "note": "No OAuth or OpenID Connect."
+    },
+    "V10.5": {
+      "status": "Not applicable",
+      "note": "No OAuth or OpenID Connect."
+    },
+    "V10.6": {
+      "status": "Not applicable",
+      "note": "No OAuth or OpenID Connect."
+    },
+    "V10.7": {
+      "status": "Not applicable",
+      "note": "No OAuth or OpenID Connect."
+    },
+    "V11.1": {
+      "status": "Planned",
+      "phase": "18",
+      "note": "Key management policy (designed in line with NIST SP 800-57) and cryptographic inventory in KEY_MANAGEMENT.md."
+    },
+    "V11.2": {
+      "status": "Planned",
+      "phase": "18",
+      "note": "pyca cryptography only; algorithm identifiers stored with every record for crypto agility."
+    },
+    "V11.3": {
+      "status": "Planned",
+      "phase": "18",
+      "note": "AES-256-GCM only."
+    },
+    "V11.4": {
+      "status": "Planned",
+      "phase": "5",
+      "note": "SHA-256 and HMAC-SHA-256 only; no MD5 or SHA1 for any security purpose (D66)."
+    },
+    "V11.5": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Python secrets module (CSPRNG) for all tokens and codes."
+    },
+    "V11.6": {
+      "status": "Planned",
+      "phase": "19",
+      "note": "Ed25519 for all signatures."
+    },
+    "V12.1": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "TLS 1.2 and 1.3 only, strong cipher suites, at nginx."
+    },
+    "V12.2": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "HTTPS for all external connections."
+    },
+    "V12.3": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "TLS on internal connections to PostgreSQL, SeaweedFS and OpenBao with an internal CA."
+    },
+    "V13.1": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.7",
+      "note": "All communication needs documented in REQUIREMENTS.md 4.7."
+    },
+    "V13.2": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Per-service credentials, least privilege, egress allowlist."
+    },
+    "V13.3": {
+      "status": "Planned",
+      "phase": "18",
+      "note": "Secrets in OpenBao with least-privilege policies."
+    },
+    "V13.4": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "No debug mode, directory listing, TRACE or unintended docs in the demo deployment."
+    },
+    "V14.1": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.8",
+      "note": "Data classes and protection rules documented in REQUIREMENTS.md 4.8."
+    },
+    "V14.2": {
+      "status": "Planned",
+      "phase": "18",
+      "note": "Protection of sensitive data per REQUIREMENTS.md 4.8."
+    },
+    "V14.3": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "No sensitive data kept in the browser beyond the session cookie; cleared at logout."
+    },
+    "V15.1": {
+      "status": "Planned",
+      "phase": "3",
+      "note": "Component inventory (SBOM) produced in CI."
+    },
+    "V15.2": {
+      "status": "Planned",
+      "phase": "3",
+      "note": "CI audits enforce the remediation time frames."
+    },
+    "V15.3": {
+      "status": "Planned",
+      "phase": "5",
+      "note": "Defensive coding in the API."
+    },
+    "V16.1": {
+      "status": "Planned",
+      "phase": "20",
+      "note": "Log inventory in TRANSPARENCY_LOG.md."
+    },
+    "V16.2": {
+      "status": "Planned",
+      "phase": "20",
+      "note": "Structured logs with who, what, when and where."
+    },
+    "V16.3": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Security events logged."
+    },
+    "V16.4": {
+      "status": "Planned",
+      "phase": "20",
+      "note": "Logs protected by the Merkle transparency log."
+    },
+    "V16.5": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Generic errors and fail-closed handling."
+    },
+    "V17.1": {
+      "status": "Not applicable",
+      "note": "The system does not use WebRTC."
+    },
+    "V17.2": {
+      "status": "Not applicable",
+      "note": "The system does not use WebRTC."
+    },
+    "V17.3": {
+      "status": "Not applicable",
+      "note": "The system does not use WebRTC."
+    }
+  },
+  "items": {
+    "V1.2.1": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "React escapes output; templates autoescape."
+    },
+    "V1.2.2": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "URLs built from server IDs only; only https links allowed."
+    },
+    "V1.2.3": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "JSON produced by the framework serializer only."
+    },
+    "V1.2.5": {
+      "status": "Planned",
+      "phase": "6",
+      "note": "OCR and scanning are called as libraries or over sockets; no shell commands with user input."
+    },
+    "V1.2.6": {
+      "status": "Not applicable",
+      "note": "The system does not use LDAP."
+    },
+    "V1.2.7": {
+      "status": "Not applicable",
+      "note": "The system does not use XPath."
+    },
+    "V1.2.8": {
+      "status": "Not applicable",
+      "note": "The system does not use LaTeX."
+    },
+    "V1.2.9": {
+      "status": "Planned",
+      "phase": "21",
+      "note": "Custody search escapes user text before any regular expression use."
+    },
+    "V1.3.1": {
+      "status": "Not applicable",
+      "note": "No rich-text (WYSIWYG) input."
+    },
+    "V1.3.2": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "tools/ci.py",
+      "note": "No eval or dynamic code execution in the codebase; Bandit and Semgrep run on every CI run (both clean on 2026-10-16)."
+    },
+    "V1.3.4": {
+      "status": "Not applicable",
+      "note": "SVG is not an accepted upload type (REQUIREMENTS.md 4.4)."
+    },
+    "V1.3.5": {
+      "status": "Not applicable",
+      "note": "No user-supplied Markdown, CSS, XSL or template content."
+    },
+    "V1.3.6": {
+      "status": "Planned",
+      "phase": "19",
+      "note": "The server only connects to the configured TSA and tree head export target; it never fetches a user-supplied URL (REQUIREMENTS.md 4.7)."
+    },
+    "V1.3.7": {
+      "status": "Planned",
+      "phase": "26",
+      "note": "Report templates are fixed files; data is passed as variables only."
+    },
+    "V1.3.8": {
+      "status": "Not applicable",
+      "note": "No Java or JNDI."
+    },
+    "V1.3.9": {
+      "status": "Not applicable",
+      "note": "No memcache."
+    },
+    "V1.3.10": {
+      "status": "Planned",
+      "phase": "3",
+      "note": "No user-controlled format strings; logging uses parameters."
+    },
+    "V1.3.11": {
+      "status": "Not applicable",
+      "note": "No e-mail sending in v1."
+    },
+    "V1.5.1": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/filetypes.py",
+      "note": "No XML parser reads user input. Uploads are parsed only by pdfium and Pillow, for type and page checks."
+    },
+    "V2.2.3": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "Combined-data rules from REQUIREMENTS.md 4.2 enforced server-side."
+    },
+    "V2.3.3": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/intake.py",
+      "note": "Document, version, stored object and custody event commit in one database transaction or not at all. A locked object written before a failed transaction cannot be removed, so it is recorded as storage.orphaned (D83)."
+    },
+    "V2.3.4": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "Each two-person approval can be used once only."
+    },
+    "V3.5.3": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/api.py",
+      "note": "Every state-changing action (create case, add member, upload, add version) is POST; GET routes change no evidence."
+    },
+    "V3.5.4": {
+      "status": "Planned",
+      "phase": "23",
+      "note": "The public verify page is served from its own hostname, separate from the staff application."
+    },
+    "V3.5.5": {
+      "status": "Not applicable",
+      "note": "No postMessage use."
+    },
+    "V5.2.3": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Archives are not accepted; PDF decompressed size is capped at 200 MB."
+    },
+    "V5.4.3": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "ClamAV scan with quarantine before intake."
+    },
+    "V6.3.2": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "No default accounts; seeded demo accounts get random passwords shown once at setup."
+    },
+    "V7.1.3": {
+      "status": "Not applicable",
+      "note": "No federated identity or SSO."
+    },
+    "V7.4.2": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "Disabling a user ends all their sessions."
+    },
+    "V9.2.1": {
+      "status": "Not applicable",
+      "note": "The QR payload has no validity time span: a QR-sealed copy stays verifiable, and revocation is checked against the record status at verify time."
+    },
+    "V9.2.4": {
+      "status": "Planned",
+      "phase": "19",
+      "note": "A separate signing key per purpose (intake seals, fingerprint records, QR payloads, tree heads, reports)."
+    },
+    "V11.4.2": {
+      "status": "Planned",
+      "phase": "16",
+      "note": "Argon2id with parameters from current guidance."
+    },
+    "V11.4.4": {
+      "status": "Not applicable",
+      "note": "No keys are derived from passwords."
+    },
+    "V12.1.3": {
+      "status": "Not applicable",
+      "note": "No mTLS client certificate authentication."
+    },
+    "V12.2.2": {
+      "status": "Accepted gap",
+      "note": "The demo runs on a local network with a self-signed certificate. A publicly trusted certificate is required for any real deployment; this is documented in Phase 22."
+    },
+    "V13.2.2": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "docker/postgres/init/01-roles.sh",
+      "note": "Separate database roles (owner for migrations, app role without DDL) and an S3 app identity without Admin rights."
+    },
+    "V13.2.3": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "tools/setup_env.py",
+      "note": "No default credentials: every password and token is generated at setup, and the app refuses placeholders."
+    },
+    "V13.4.1": {
+      "status": "Done",
+      "phase": "3",
+      "ref": ".dockerignore",
+      "note": ".git, .env and docker/secrets are excluded from every image build."
+    },
+    "V14.2.1": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/api.py",
+      "note": "URLs carry only server-generated UUIDs; identity travels in headers and content in the body."
+    },
+    "V14.2.2": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Cache-Control: no-store on all authenticated and evidence responses."
+    },
+    "V14.2.3": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "No third-party trackers, analytics or CDNs in the UI."
+    },
+    "V14.3.2": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Cache-Control: no-store on sensitive responses."
+    },
+    "V14.3.3": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "Nothing sensitive in localStorage, sessionStorage or IndexedDB."
+    },
+    "V15.1.1": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.9",
+      "note": "Remediation time frames documented in REQUIREMENTS.md 4.9."
+    },
+    "V15.1.3": {
+      "status": "Done",
+      "phase": "2",
+      "ref": "docs/REQUIREMENTS.md#4.10",
+      "note": "Resource-heavy functions and their controls documented in REQUIREMENTS.md 4.10."
+    },
+    "V15.2.2": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Limits from REQUIREMENTS.md 4.10 enforced."
+    },
+    "V15.2.3": {
+      "status": "Planned",
+      "phase": "28",
+      "note": "The demo image contains no tests, sample code or development endpoints."
+    },
+    "V15.3.1": {
+      "status": "Planned",
+      "phase": "8",
+      "note": "Response models return only required fields; the public page returns one message only."
+    },
+    "V15.3.2": {
+      "status": "Planned",
+      "phase": "19",
+      "note": "Outbound clients (TSA, export) do not follow redirects."
+    },
+    "V15.3.4": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "nginx sets the client address; the API trusts it only from nginx."
+    },
+    "V15.3.6": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "Map and Set used for user-keyed data in the UI."
+    },
+    "V15.3.7": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Each parameter read from one explicit source only."
+    },
+    "V16.2.2": {
+      "status": "Planned",
+      "phase": "3",
+      "note": "UTC timestamps; NTP sync to NIC or NPL (CERT-In direction, REQUIREMENTS.md NFR-10)."
+    },
+    "V16.2.4": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "app/logs.py",
+      "note": "One JSON object per log line with UTC timestamps and request IDs."
+    },
+    "V16.2.5": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Log scrubbing by data class (REQUIREMENTS.md 4.8)."
+    },
+    "V16.3.2": {
+      "status": "Planned",
+      "phase": "17",
+      "note": "Failed authorization attempts logged."
+    },
+    "V16.3.3": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Security events and bypass attempts logged."
+    },
+    "V16.3.4": {
+      "status": "Planned",
+      "phase": "22",
+      "note": "Unexpected errors and control failures logged."
+    },
+    "V16.4.1": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "app/logs.py",
+      "note": "JSON encoding escapes newlines and quotes, so user text cannot forge log lines."
+    },
+    "V16.4.3": {
+      "status": "Accepted gap",
+      "note": "Full log shipping to a separate system is out of demo scope. Signed tree heads are exported outside the system every day, so any change to logged history is detected (threats T18, T19)."
+    },
+    "V16.5.2": {
+      "status": "Planned",
+      "phase": "19",
+      "note": "If the TSA is down, intake continues and records are marked time-stamp pending."
+    },
+    "V16.5.3": {
+      "status": "Planned",
+      "phase": "8",
+      "note": "Fail closed: an error during verification gives no verdict, never Equivalent."
+    },
+    "V1.5.2": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "app/worker.py",
+      "note": "Task messages and results are JSON only; pickle is not accepted. Model loading (Phase 12) will be re-checked against this item."
+    },
+    "V15.2.1": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "tools/ci.py",
+      "note": "pip-audit and npm audit run on every CI run and weekly; no known vulnerable component on 2026-10-16."
+    },
+    "V16.5.1": {
+      "status": "Done",
+      "phase": "3",
+      "ref": "app/main.py",
+      "note": "Unexpected errors return a generic message with a request ID; stack traces go to the server log only."
+    },
+    "V1.1.1": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/validation.py",
+      "note": "Form and JSON input is decoded once by FastAPI; free text is NFC-normalised before it is validated, never after."
+    },
+    "V1.1.2": {
+      "status": "Planned",
+      "phase": "9",
+      "note": "JSON is encoded by the framework serializer and SQL values are bound by the ORM (Phase 5); React escapes output when the UI shows document data."
+    },
+    "V1.2.4": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/intake.py",
+      "note": "All queries go through the SQLAlchemy ORM with bound parameters; no SQL is built from strings."
+    },
+    "V2.2.1": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "tests/app/test_intake_api.py",
+      "note": "Every Phase 5 input is checked against an allow list or pattern (types, extensions, roles, user IDs, document types, text length, UUIDs). Later phases add their inputs to the same layer."
+    },
+    "V2.2.2": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/validation.py",
+      "note": "Validation runs in the API service layer; there is no client-side validation to rely on."
+    },
+    "V5.2.1": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "tests/app/test_filetypes.py",
+      "note": "25 MB per file, 30 pages and 40 megapixels per page image, checked before decoding; the request body is cut off at the limit even without Content-Length. The 200 MB decompressed PDF limit is Phase 22 (V5.2.3)."
+    },
+    "V5.2.2": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "tests/app/test_filetypes.py",
+      "note": "Type from magic bytes, extension must match, and the file must open in pdfium or Pillow; the client Content-Type is ignored."
+    },
+    "V5.3.1": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/storage.py",
+      "note": "Originals go only to the object store under server keys; nothing is written to a folder served over HTTP."
+    },
+    "V5.3.2": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/intake.py",
+      "note": "Storage keys are built from server IDs and the SHA-256 only. The uploader's file name is cleaned and kept as display text, never used in a path."
+    },
+    "V11.4.1": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/intake.py",
+      "note": "SHA-256 is the evidence hash. MD5 is computed only for the S3 Content-MD5 transport check that Object Lock uploads need, marked usedforsecurity=False, and never used to prove integrity (D66, D86)."
+    },
+    "V11.4.3": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/intake.py",
+      "note": "Integrity of originals rests on SHA-256 (256-bit output)."
+    },
+    "V15.3.3": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/cases/api.py",
+      "note": "Each route accepts an explicit Pydantic model or named form fields; IDs, owners, hashes and timestamps are set by the server only."
+    },
+    "V15.3.5": {
+      "status": "Done",
+      "phase": "5",
+      "ref": "app/evidence/api.py",
+      "note": "Path IDs are parsed as UUIDs and inputs as typed Pydantic fields; comparisons use typed values."
+    }
+  }
+}
