@@ -7,3 +7,11 @@
 *.gif binary
 *.webp binary
 *.zip binary
+
+# Files whose exact bytes are hashed elsewhere: store them as they are, with no line-ending
+# conversion (the ASVS source CSV has a recorded SHA-256; dataset label, manifest and split
+# files have hashes in the dataset cards and manifest.json)
+docs/asvs/OWASP_ASVS_5.0.0_en.csv -text
+dataset/** -text
+dataset_v2/** -text
+dataset_v3/** -text
