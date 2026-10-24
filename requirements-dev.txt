@@ -1,6 +1,12 @@
-# Development, test and CI tools, pinned. Includes the runtime set and the dataset generator set.
+# Development, test and CI tools, pinned. Includes the runtime set and the dataset generator's
+# libraries. Pillow comes from requirements.txt (13.0.0). ml/requirements-data.txt is not
+# included: it pins Pillow 12.3.0 for byte-identical dataset rebuilds and is installed in its
+# own environment only for that (D98).
 -r requirements.txt
--r ml/requirements-data.txt
+reportlab==5.0.1
+opencv-python-headless==5.0.0.93
+numpy==2.5.4
+pytest==9.1.1
 PyYAML==6.0.3
 bandit==1.9.4
 pip-audit==2.10.1

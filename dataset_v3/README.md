@@ -6,9 +6,13 @@ Built on 18 October 2026 with the project generator (`ml/data/generator`), decis
 
 ## Rebuild
 
+Use a separate environment with the generator's exact pins (`ml/requirements-data.txt`, Pillow 12.3.0). The main `.venv` uses Pillow 13.0.0, which can produce different JPEG bytes, so its rebuild would not match the hashes below (D98).
+
 ```powershell
-.venv\Scripts\python -m ml.data.generator.build --out dataset_v3 --seed 20261018 --n-fir 80 --n-chargesheet 60 --n-statement 60 --n-fir-unseen 12 --n-chargesheet-unseen 9 --n-statement-unseen 9 --format-per-doc 8 --eclass-plan
-.venv\Scripts\python -m ml.data.e_class --data dataset_v3
+py -3.14 -m venv .venv-data
+.venv-data\Scripts\python -m pip install -r ml\requirements-data.txt
+.venv-data\Scripts\python -m ml.data.generator.build --out dataset_v3 --seed 20261018 --n-fir 80 --n-chargesheet 60 --n-statement 60 --n-fir-unseen 12 --n-chargesheet-unseen 9 --n-statement-unseen 9 --format-per-doc 8 --eclass-plan
+.venv-data\Scripts\python -m ml.data.e_class --data dataset_v3
 ```
 
 The same seed gives byte-identical files. Build time on 12 cores: 55 minutes. Size: 12 GB. Generated folders are git-ignored.

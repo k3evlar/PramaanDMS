@@ -35,3 +35,6 @@ analysis/dataset_audit/.venv/
 dataset_v2/base_docs/
 dataset_v2/tampered/
 dataset_v2/captures/
+
+# Separate environment for exact dataset rebuilds (ml/requirements-data.txt, D98)
+.venv-data/

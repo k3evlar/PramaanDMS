@@ -13,5 +13,6 @@ redis==8.1.0
 httpx==0.28.1
 python-multipart==0.0.32
 boto3==1.43.114
-pillow==12.3.0
+# Pillow 12.3.0 had 8 known vulnerabilities (pip-audit); 13.0.0 fixes them (D98)
+pillow==13.0.0
 pypdfium2==5.14.0
